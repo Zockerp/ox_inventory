@@ -1,727 +1,839 @@
 return {
 	Weapons = {
 		['WEAPON_BATTLERIFLE'] = {
-			label = 'Battle Rifle',
-			weight = 3300,
-			durability = 0.03,
+			label = 'Kampfbüchse',
+			description = 'Eine leistungsstarke Kampfbüchse.',
+			weight = 4000,
+			durability = 0.02,
 			ammoname = 'ammo-rifle2',
 		},
 
 		['WEAPON_SNOWLAUNCHER'] = {
-			label = 'Snowball Launcher',
-			weight = 1000,
-			durability = 0.03,
+			label = 'Schneeballwerfer',
+			description = 'Ein Werfer für Schneebälle.',
+			weight = 1500,
+			durability = 0.02,
 			ammoname = 'WEAPON_SNOWBALL',
 		},
 
 		['WEAPON_TECPISTOL'] = {
-			label = 'Tactical SMG',
-			weight = 1500,
-			durability = 0.075,
+			label = 'Taktische SMG',
+			description = 'Eine kompakte taktische Maschinenpistole.',
+			weight = 2000,
+			durability = 0.08,
 			ammoname = 'ammo-9',
 		},
 
 		['WEAPON_ADVANCEDRIFLE'] = {
-			label = 'Advanced Rifle',
-			weight = 3100,
-			durability = 0.03,
+			label = 'Fortgeschrittenes Gewehr',
+			description = 'Ein fortschrittliches Sturmgewehr.',
+			weight = 3500,
+			durability = 0.04,
 			ammoname = 'ammo-rifle',
 		},
 
 		['WEAPON_APPISTOL'] = {
-			label = 'AP Pistol',
-			weight = 1400,
+			label = 'AP Pistole',
+			description = 'Eine automatische Pistole.',
+			weight = 1200,
 			durability = 0.1,
 			ammoname = 'ammo-9',
 		},
 
 		['WEAPON_ASSAULTRIFLE'] = {
-			label = 'Assault Rifle',
+			label = 'Sturmgewehr',
+			description = 'Ein standardmäßiges Sturmgewehr.',
 			weight = 4500,
-			durability = 0.03,
+			durability = 0.05,
 			ammoname = 'ammo-rifle2',
 		},
 
 		['WEAPON_ASSAULTRIFLE_MK2'] = {
-			label = 'Assault Rifle MK2',
-			weight = 2950,
-			durability = 0.03,
+			label = 'Sturmgewehr MK2',
+			description = 'Eine verbesserte Version des Sturmgewehrs.',
+			weight = 3200,
+			durability = 0.05,
 			ammoname = 'ammo-rifle2',
 		},
 
 		['WEAPON_ASSAULTSHOTGUN'] = {
-			label = 'Assault Shotgun',
-			weight = 5200,
-			durability = 0.05,
+			label = 'Sturmschrotflinte',
+			description = 'Eine leistungsstarke Schrotflinte.',
+			weight = 5000,
+			durability = 0.06,
 			ammoname = 'ammo-shotgun'
 		},
 
 		['WEAPON_ASSAULTSMG'] = {
-			label = 'Assault SMG',
-			weight = 2900,
-			durability = 0.05,
+			label = 'Sturm-SMG',
+			description = 'Eine kompakte Maschinenpistole.',
+			weight = 3000,
+			durability = 0.06,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_BALL'] = {
 			label = 'Ball',
-			weight = 149,
+			description = 'Ein einfacher Ball.',
+			weight = 150,
 			throwable = true,
 		},
 
 		['WEAPON_BAT'] = {
-			label = 'Bat',
-			weight = 1134,
-			durability = 0.1,
+			label = 'Schläger',
+			description = 'Ein Baseballschläger.',
+			weight = 1200,
+			durability = 0.15,
+			types = 'Werkzeug',
 		},
 
 		['WEAPON_BATTLEAXE'] = {
-			label = 'Battle Axe',
-			weight = 6500,
-			durability = 0.1,
+			label = 'Kampfaxt',
+			description = 'Eine schwere Kampfaxt.',
+			weight = 7000,
+			durability = 0.12,
 		},
 
 		['WEAPON_BOTTLE'] = {
-			label = 'Bottle',
-			weight = 350,
-			durability = 0.1,
+			label = 'Flasche',
+			description = 'Eine zerbrechliche Flasche.',
+			weight = 400,
+			durability = 0.05,
 		},
 
 		['WEAPON_BULLPUPRIFLE'] = {
-			label = 'Bullpup Rifle',
-			weight = 2900,
-			durability = 0.03,
+			label = 'Bullpup-Gewehr',
+			description = 'Ein kompaktes Sturmgewehr.',
+			weight = 3000,
+			durability = 0.04,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_BULLPUPRIFLE_MK2'] = {
-			label = 'Bullpup Rifle MK2',
-			weight = 2900,
-			durability = 0.03,
+			label = 'Bullpup-Gewehr MK2',
+			description = 'Eine verbesserte Version des Bullpup-Gewehrs.',
+			weight = 3100,
+			durability = 0.04,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_BULLPUPSHOTGUN'] = {
-			label = 'Bullpup Shotgun',
-			weight = 3100,
-			durability = 0.2,
+			label = 'Bullpup-Schrotflinte',
+			description = 'Eine kompakte Schrotflinte.',
+			weight = 3200,
+			durability = 0.25,
 			ammoname = 'ammo-shotgun'
 		},
 
 		['WEAPON_BZGAS'] = {
 			label = 'BZ Gas',
-			weight = 600,
+			description = 'Ein Behälter mit BZ-Gas.',
+			weight = 700,
 			throwable = true,
 		},
 
 		['WEAPON_CARBINERIFLE'] = {
-			label = 'Carbine Rifle',
-			weight = 3100,
-			durability = 0.03,
+			label = 'Karabinergewehr',
+			description = 'Ein vielseitiges Karabinergewehr.',
+			weight = 3200,
+			durability = 0.04,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_CARBINERIFLE_MK2'] = {
-			label = 'Carbine Rifle MK2',
-			weight = 3000,
-			durability = 0.03,
+			label = 'Karabinergewehr MK2',
+			description = 'Eine verbesserte Version des Karabinergewehrs.',
+			weight = 3300,
+			durability = 0.04,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_CERAMICPISTOL'] = {
-			label = 'Ceramic Pistol',
-			weight = 800,
-			durability = 0.2,
+			label = 'Keramikpistole',
+			description = 'Eine leichte Keramikpistole.',
+			weight = 900,
+			durability = 0.25,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_PISTOLXM3'] = {
-			label = 'WM 29 Pistol',
-			weight = 969,
-			durability = 0.2,
-			ammoname = 'ammo-9'
+			label = 'WM 29 Pistole',
+			description = 'Eine kompakte Pistole.',
+			weight = 1000,
+			durability = 0.02,
+			ammoname = 'ammo-9',
+			types = 'Pistole'
 		},
 
 		['WEAPON_COMBATMG'] = {
-			label = 'Combat MG',
-			weight = 7500,
-			durability = 0.02,
+			label = 'Kampf-MG',
+			description = 'Ein schweres Maschinengewehr.',
+			weight = 8000,
+			durability = 0.03,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_COMBATMG_MK2'] = {
-			label = 'Combat MG MK2',
-			weight = 8000,
-			durability = 0.02,
+			label = 'Kampf-MG MK2',
+			description = 'Eine verbesserte Version des Kampf-MG.',
+			weight = 8500,
+			durability = 0.03,
 			ammoname = 'ammo-rifle2'
 		},
 
 		['WEAPON_COMBATPDW'] = {
-			label = 'Combat PDW',
-			weight = 2300,
-			durability = 0.1,
+			label = 'Kampf-PDW',
+			description = 'Eine persönliche Verteidigungswaffe.',
+			weight = 2500,
+			durability = 0.12,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_COMBATPISTOL'] = {
-			label = 'Combat Pistol',
-			weight = 785,
-			durability = 0.2,
+			label = 'Kampfpistole',
+			description = 'Eine zuverlässige Kampfpistole.',
+			weight = 800,
+			durability = 0.25,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_COMBATSHOTGUN'] = {
-			label = 'Combat Shotgun',
-			weight = 4400,
-			durability = 0.2,
+			label = 'Kampfschrotflinte',
+			description = 'Eine leistungsstarke Kampfschrotflinte.',
+			weight = 4500,
+			durability = 0.25,
 			ammoname = 'ammo-shotgun'
 		},
 
 		['WEAPON_COMPACTLAUNCHER'] = {
-			label = 'Compact Grenade Launcher',
-			weight = 2500,
-			durability = 0.05,
+			label = 'Kompakt-Granatwerfer',
+			description = 'Ein kompakter Granatwerfer.',
+			weight = 2700,
+			durability = 0.06,
 			ammoname = 'ammo-grenade'
 		},
 
 		['WEAPON_COMPACTRIFLE'] = {
-			label = 'Compact Rifle',
-			weight = 3600,
-			durability = 0.05,
+			label = 'Kompaktgewehr',
+			description = 'Ein kompaktes Sturmgewehr.',
+			weight = 3700,
+			durability = 0.06,
 			ammoname = 'ammo-rifle2'
 		},
 
 		['WEAPON_CROWBAR'] = {
-			label = 'Crowbar',
-			weight = 2500,
-			durability = 0.1,
+			label = 'Brecheisen',
+			description = 'Ein robustes Brecheisen.',
+			weight = 2600,
+			durability = 0.15,
 		},
 
 		['WEAPON_DAGGER'] = {
-			label = 'Dagger',
-			weight = 800,
-			durability = 0.1,
+			label = 'Dolch',
+			description = 'Ein scharfer Dolch.',
+			weight = 900,
+			durability = 0.15,
 		},
 
 		['WEAPON_DBSHOTGUN'] = {
-			label = 'Double Barrel Shotgun',
-			weight = 3175,
-			durability = 0.4,
+			label = 'Doppelläufige Schrotflinte',
+			description = 'Eine doppelläufige Schrotflinte.',
+			weight = 3300,
+			durability = 0.45,
 			ammoname = 'ammo-shotgun'
 		},
 
 		['WEAPON_DOUBLEACTION'] = {
-			label = 'Double Action Revolver',
-			weight = 940,
-			durability = 0.2,
-			ammoname = 'ammo-38'
+			label = 'Doppelte Aktion Revolver',
+			description = 'Ein Revolver mit doppelter Aktion.',
+			weight = 1000,
+			durability = 0.25,
+			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_EMPLAUNCHER'] = {
-			label = 'Compact EMP Launcher',
-			weight = 2750,
-			durability = 0.2,
+			label = 'EMP-Werfer',
+			description = 'Ein kompakter EMP-Werfer.',
+			weight = 2900,
+			durability = 0.25,
 			ammoname = 'ammo-emp'
 		},
 
 		['WEAPON_FIREEXTINGUISHER'] = {
-			label = 'Fire Extinguisher',
-			weight = 8616,
-            durability = 0.006
+			label = 'Feuerlöscher',
+			description = 'Ein tragbarer Feuerlöscher.',
+			weight = 9000,
+			durability = 0.01
 		},
 
 		['WEAPON_FIREWORK'] = {
-			label = 'Firework Launcher',
-			weight = 1000,
-			durability = 0.5,
+			label = 'Feuerwerkswerfer',
+			description = 'Ein Werfer für Feuerwerkskörper.',
+			weight = 1200,
+			durability = 0.6,
 			ammoname = 'ammo-firework'
 		},
 
 		['WEAPON_FLARE'] = {
-			label = 'Flare',
-			weight = 250,
+			label = 'Leuchtsignal',
+			description = 'Ein Leuchtsignal.',
+			weight = 300,
 			throwable = true,
 		},
 
 		['WEAPON_FLAREGUN'] = {
-			label = 'Flare Gun',
-			weight = 1000,
-			durability = 0.5,
+			label = 'Leuchtsignalpistole',
+			description = 'Eine Pistole für Leuchtsignale.',
+			weight = 1200,
+			durability = 0.6,
 			ammoname = 'ammo-flare'
 		},
 
 		['WEAPON_FLASHLIGHT'] = {
-			label = 'Flashlight',
-			weight = 125,
-			durability = 0.1,
+			label = 'Taschenlampe',
+			description = 'Eine tragbare Taschenlampe.',
+			weight = 150,
+			durability = 0.15,
 		},
 
 		['WEAPON_GOLFCLUB'] = {
-			label = 'Golf Club',
-			weight = 330,
-			durability = 0.1,
+			label = 'Golfschläger',
+			description = 'Ein Golfschläger.',
+			weight = 400,
+			durability = 0.15,
 		},
 
 		['WEAPON_GRENADE'] = {
-			label = 'Grenade',
-			weight = 400,
+			label = 'Granate',
+			description = 'Eine explosive Granate.',
+			weight = 500,
 			throwable = true,
 		},
 
 		['WEAPON_GRENADELAUNCHER'] = {
-			label = 'Grenade Launcher',
-			weight = 6500,
-			durability = 0.05,
+			label = 'Granatwerfer',
+			description = 'Ein leistungsstarker Granatwerfer.',
+			weight = 7000,
+			durability = 0.06,
 			ammoname = 'ammo-grenade'
 		},
 
 		['WEAPON_GUSENBERG'] = {
 			label = 'Gusenberg',
-			weight = 4900,
-			durability = 0.04,
-			ammoname = 'ammo-45'
+			description = 'Ein Maschinengewehr im klassischen Stil.',
+			weight = 5000,
+			durability = 0.05,
+			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_HAMMER'] = {
 			label = 'Hammer',
-			weight = 1200,
-			durability = 0.1,
+			description = 'Ein robuster Hammer.',
+			weight = 1300,
+			durability = 0.15,
 		},
 
 		['WEAPON_HATCHET'] = {
-			label = 'Hatchet',
-			weight = 1000,
-			durability = 0.1,
+			label = 'Axt',
+			description = 'Eine scharfe Axt.',
+			weight = 1500,
+			durability = 0.25,
+			types = 'Werkzeug',
 		},
 
 		['WEAPON_HEAVYRIFLE'] = {
-			label = 'Heavy Rifle',
-			weight = 3300,
-			durability = 0.2,
+			label = 'Schweres Gewehr',
+			description = 'Ein schweres Gewehr mit hoher Durchschlagskraft.',
+			weight = 4500,
+			durability = 0.9,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_HAZARDCAN'] = {
-			label = 'Hazard Can',
-			weight = 12000,
+			label = 'Gefahrendose',
+			description = 'Eine Dose mit gefährlichem Inhalt.',
+			weight = 10000,
 		},
 
 		['WEAPON_METALDETECTOR'] = {
-			label = 'Metal Detector',
-			weight = 1200,
+			label = 'Metalldetektor',
+			description = 'Ein Gerät zum Aufspüren von Metall.',
+			weight = 2000,
 		},
 
 		['WEAPON_HOMINGLAUNCHER'] = {
-			label = 'Homing Launcher',
-			weight = 10000,
-			durability = 0.6,
+			label = 'Lenkraketenwerfer',
+			description = 'Ein Raketenwerfer mit Zielverfolgung.',
+			weight = 15000,
+			durability = 0.7,
 			ammoname = 'ammo-rocket'
 		},
 
 		['WEAPON_FERTILIZERCAN'] = {
-			label = 'Fertilizer Can',
-			weight = 12000,
+			label = 'Düngemitteldose',
+			description = 'Eine Dose mit Düngemittel.',
+			weight = 8000,
 		},
 
 		['WEAPON_HEAVYPISTOL'] = {
-			label = 'Heavy Pistol',
-			weight = 1100,
-			durability = 0.2,
-			ammoname = 'ammo-45'
+			label = 'Schwere Pistole',
+			description = 'Eine schwere Pistole mit hoher Durchschlagskraft.',
+			weight = 1500,
+			durability = 0.85,
+			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_HEAVYSHOTGUN'] = {
-			label = 'Heavy Shotgun',
-			weight = 3600,
-			durability = 0.1,
+			label = 'Schrotflinte',
+			description = 'Eine Schrotflinte mit hoher Durchschlagskraft.',
+			weight = 5000,
+			durability = 0.8,
 			ammoname = 'ammo-shotgun'
 		},
 
 		['WEAPON_HEAVYSNIPER'] = {
-			label = 'Heavy Sniper',
-			weight = 12700,
-			durability = 0.5,
-			ammoname = 'ammo-heavysniper'
+			label = 'Schweres Scharfschützengewehr',
+			description = 'Ein schweres Scharfschützengewehr mit hoher Reichweite.',
+			weight = 12000,
+			durability = 0.9,
+			ammoname = 'ammo-sniper'
 		},
 
 		['WEAPON_HEAVYSNIPER_MK2'] = {
-			label = 'Heavy Sniper MK2',
-			weight = 14000,
-			durability = 0.5,
-			ammoname = 'ammo-heavysniper'
+			label = 'Schweres Scharfschützengewehr MK2',
+			description = 'Ein verbessertes schweres Scharfschützengewehr.',
+			weight = 13000,
+			durability = 0.9,
+			ammoname = 'ammo-sniper'
 		},
 
 		['WEAPON_KNIFE'] = {
-			label = 'Knife',
-			weight = 300,
-			durability = 0.1,
+			label = 'Messer',
+			description = 'Ein scharfes Messer.',
+			weight = 500,
+			durability = 0.7,
 		},
 
 		['WEAPON_KNUCKLE'] = {
-			label = 'Knuckle Dusters',
-			weight = 300,
-			durability = 0.1,
+			label = 'Schlagring',
+			description = 'Ein Schlagring für den Nahkampf.',
+			weight = 400,
+			durability = 0.8,
 		},
 
 		['WEAPON_MACHETE'] = {
 			label = 'Machete',
-			weight = 1000,
-			durability = 0.1,
+			description = 'Eine große, scharfe Machete.',
+			weight = 1200,
+			durability = 0.75,
 		},
 
 		['WEAPON_MACHINEPISTOL'] = {
-			label = 'Machine Pistol',
-			weight = 1400,
-			durability = 0.05,
+			label = 'Maschinenpistole',
+			description = 'Eine kompakte Maschinenpistole.',
+			weight = 2000,
+			durability = 0.85,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_MARKSMANPISTOL'] = {
-			label = 'Marksman Pistol',
-			weight = 1588,
-			durability = 0.5,
-			ammoname = 'ammo-22'
+			label = 'Präzisionspistole',
+			description = 'Eine Pistole für präzise Schüsse.',
+			weight = 1800,
+			durability = 0.9,
+			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_MARKSMANRIFLE'] = {
-			label = 'Marksman Rifle',
-			weight = 7500,
-			durability = 0.4,
+			label = 'Präzisionsgewehr',
+			description = 'Ein Gewehr für präzise Schüsse.',
+			weight = 7000,
+			durability = 0.85,
 			ammoname = 'ammo-sniper'
 		},
 
 		['WEAPON_MARKSMANRIFLE_MK2'] = {
-			label = 'Marksman Rifle MK2',
-			weight = 4000,
-			durability = 0.4,
+			label = 'Präzisionsgewehr MK2',
+			description = 'Ein verbessertes Präzisionsgewehr.',
+			weight = 7500,
+			durability = 0.85,
 			ammoname = 'ammo-sniper'
 		},
 
 		['WEAPON_MG'] = {
-			label = 'Machine Gun',
-			weight = 9000,
-			durability = 0.02,
+			label = 'Maschinengewehr',
+			description = 'Ein schweres Maschinengewehr.',
+			weight = 10000,
+			durability = 0.8,
 			ammoname = 'ammo-rifle2'
 		},
 
 		['WEAPON_MINIGUN'] = {
 			label = 'Minigun',
-			weight = 38500,
-			durability = 0.1,
+			description = 'Eine schwere Minigun.',
+			weight = 30000,
+			durability = 0.9,
 			ammoname = 'ammo-rifle2'
 		},
 
 		['WEAPON_MICROSMG'] = {
 			label = 'Micro SMG',
-			weight = 3000,
-			durability = 0.1,
-			ammoname = 'ammo-45'
+			description = 'Eine kompakte Maschinenpistole.',
+			weight = 2500,
+			durability = 0.85,
+			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_MILITARYRIFLE'] = {
-			label = 'Military Rifle',
-			weight = 3600,
-			durability = 0.03,
+			label = 'Militärgewehr',
+			description = 'Ein Gewehr für militärische Einsätze.',
+			weight = 4000,
+			durability = 0.9,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_MINISMG'] = {
 			label = 'Mini SMG',
-			weight = 1270,
-			durability = 0.05,
+			description = 'Eine sehr kompakte Maschinenpistole.',
+			weight = 1500,
+			durability = 0.85,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_MOLOTOV'] = {
-			label = 'Molotov',
-			weight = 1800,
+			label = 'Molotowcocktail',
+			description = 'Ein improvisierter Brandsatz.',
+			weight = 1000,
 			throwable = true,
 		},
 
 		['WEAPON_MUSKET'] = {
-			label = 'Musket',
-			weight = 4500,
-			durability = 0.5,
-			ammoname = 'ammo-musket'
+			label = 'Muskete',
+			description = 'Eine alte Muskete.',
+			weight = 5000,
+			durability = 0.7,
+			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_NAVYREVOLVER'] = {
-			label = 'Navy Revolver',
-			weight = 4000,
-			durability = 0.2,
-			ammoname = 'ammo-44'
+			label = 'Marine-Revolver',
+			description = 'Ein schwerer Revolver.',
+			weight = 3500,
+			durability = 0.85,
+			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_NIGHTSTICK'] = {
-			label = 'Nightstick',
-			weight = 1000,
-			durability = 0.1,
+			label = 'Schlagstock',
+			description = 'Ein Schlagstock für den Nahkampf.',
+			weight = 800,
+			durability = 0.9,
 		},
 
 		['WEAPON_PETROLCAN'] = {
-			label = 'Jerry Can',
-			weight = 4000,
+			label = 'Benzinkanister',
+			description = 'Ein Kanister mit Benzin.',
+			weight = 5000,
 		},
 
 		['WEAPON_GADGETPISTOL'] = {
-			label = 'Perico Pistol',
-			weight = 1750,
-			durability = 0.1,
+			label = 'Gadget-Pistole',
+			description = 'Eine spezielle Pistole.',
+			weight = 1200,
+			durability = 0.8,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_PIPEBOMB'] = {
-			label = 'Pipe Bomb',
-			weight = 1800,
+			label = 'Rohrbombe',
+			description = 'Eine improvisierte Rohrbombe.',
+			weight = 1500,
 			throwable = true,
 		},
 
 		['WEAPON_PISTOL'] = {
-			label = 'Pistol',
-			weight = 1130,
-			durability = 0.1,
+			label = 'Pistole',
+			description = 'Eine Standardpistole.',
+			weight = 1000,
+			durability = 0.85,
 			ammoname = 'ammo-9',
 		},
 
 		['WEAPON_PISTOL50'] = {
-			label = 'Pistol .50',
-			weight = 2000,
-			durability = 0.1,
+			label = 'Pistole .50',
+			description = 'Eine Pistole mit großem Kaliber.',
+			weight = 1800,
+			durability = 0.9,
 			ammoname = 'ammo-50'
 		},
-
-		['WEAPON_PISTOL_MK2'] = {
-			label = 'Pistol MK2',
-			weight = 1000,
-			durability = 0.5,
+				['WEAPON_PISTOL_MK2'] = {
+			label = 'Pistole MK2',
+			description = 'Eine verbesserte Version der Standardpistole.',
+			weight = 970,
+			durability = 0.8,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_POOLCUE'] = {
-			label = 'Pool Cue',
-			weight = 146,
-			durability = 0.1,
+			label = 'Billardqueue',
+			description = 'Ein Queue für Billardspiele.',
+			weight = 500,
+			durability = 0.3,
 		},
 
 		['WEAPON_CANDYCANE'] = {
-			label = 'Candy Cane',
-			weight = 85,
+			label = 'Zuckerstange',
+			description = 'Eine süße Zuckerstange.',
+			weight = 50,
 			durability = 0.1,
 		},
 
 		['WEAPON_PROXMINE'] = {
-			label = 'Proximity Mine',
-			weight = 2500,
+			label = 'Annäherungsmine',
+			description = 'Eine Mine, die bei Annäherung explodiert.',
+			weight = 1500,
 			throwable = true,
 		},
 
 		['WEAPON_PUMPSHOTGUN'] = {
-			label = 'Pump Shotgun',
-			weight = 3400,
-			durability = 0.1,
+			label = 'Pumpflinte',
+			description = 'Eine leistungsstarke Pumpflinte.',
+			weight = 3500,
+			durability = 0.7,
 			ammoname = 'ammo-shotgun'
 		},
 
 		['WEAPON_PUMPSHOTGUN_MK2'] = {
-			label = 'Pump Shotgun MK2',
-			weight = 3200,
-			durability = 0.1,
+			label = 'Pumpflinte MK2',
+			description = 'Eine verbesserte Version der Pumpflinte.',
+			weight = 3400,
+			durability = 0.7,
 			ammoname = 'ammo-shotgun'
 		},
 
 		['WEAPON_RAILGUN'] = {
 			label = 'Railgun',
-			weight = 3570,
-			durability = 0.5,
+			description = 'Eine futuristische Waffe mit hoher Durchschlagskraft.',
+			weight = 4000,
+			durability = 0.9,
 			ammoname = 'ammo-railgun'
 		},
 
 		['WEAPON_RAILGUNXM3'] = {
 			label = 'Railgun XM3',
-			weight = 3570,
-			durability = 0.5,
+			description = 'Eine verbesserte Version der Railgun.',
+			weight = 4000,
+			durability = 0.9,
 			ammoname = 'ammo-railgun'
 		},
 
 		['WEAPON_RAYCARBINE'] = {
-			label = 'Unholy Hellbringer',
-			weight = 3620,
-			durability = 0.2,
+			label = 'Unheilige Höllenbringer',
+			description = 'Eine leistungsstarke Laserwaffe.',
+			weight = 3000,
+			durability = 0.6,
 			ammoname = 'ammo-laser'
 		},
 
 		['WEAPON_RAYPISTOL'] = {
 			label = 'Up-n-Atomizer',
-			weight = 1540,
-			durability = 0.5
+			description = 'Eine futuristische Pistole.',
+			weight = 1500,
+			durability = 0.8
 		},
 
 		['WEAPON_REVOLVER'] = {
 			label = 'Revolver',
-			weight = 2260,
-			durability = 0.1,
-			ammoname = 'ammo-44'
+			description = 'Ein klassischer Revolver.',
+			weight = 1200,
+			durability = 0.7,
+			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_REVOLVER_MK2'] = {
 			label = 'Revolver MK2',
-			weight = 2600,
-			durability = 0.1,
-			ammoname = 'ammo-44'
+			description = 'Eine verbesserte Version des Revolvers.',
+			weight = 1300,
+			durability = 0.7,
+			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_RPG'] = {
 			label = 'RPG',
-			weight = 5000,
-			durability = 0.3,
+			description = 'Ein Raketenwerfer.',
+			weight = 7000,
+			durability = 0.5,
 			ammoname = 'ammo-rocket'
 		},
 
 		['WEAPON_SAWNOFFSHOTGUN'] = {
-			label = 'Sawn Off Shotgun',
-			weight = 2380,
-			durability = 0.1,
+			label = 'Abgesägte Schrotflinte',
+			description = 'Eine kompakte Schrotflinte.',
+			weight = 2500,
+			durability = 0.6,
 			ammoname = 'ammo-shotgun'
 		},
 
 		['WEAPON_SMG'] = {
 			label = 'SMG',
-			weight = 3084,
+			description = 'Eine kompakte Maschinenpistole.',
+			weight = 3000,
 			durability = 0.8,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_SMG_MK2'] = {
 			label = 'SMG Mk2',
-			weight = 2700,
-			durability = 0.05,
+			description = 'Eine verbesserte Version der SMG.',
+			weight = 2800,
+			durability = 0.8,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_SMOKEGRENADE'] = {
-			label = 'Smoke Grenade',
-			weight = 600,
+			label = 'Rauchgranate',
+			description = 'Eine Granate, die Rauch freisetzt.',
+			weight = 500,
 			throwable = true,
 		},
 
 		['WEAPON_SNIPERRIFLE'] = {
-			label = 'Sniper Rifle',
-			weight = 5000,
-			durability = 0.5,
+			label = 'Scharfschützengewehr',
+			description = 'Ein Gewehr für weite Distanzen.',
+			weight = 6000,
+			durability = 0.9,
 			ammoname = 'ammo-sniper'
 		},
 
 		['WEAPON_SNOWBALL'] = {
-			label = 'Snow Ball',
-			weight = 5,
+			label = 'Schneeball',
+			description = 'Ein Ball aus Schnee.',
+			weight = 50,
 			throwable = true,
 		},
 
 		['WEAPON_SNSPISTOL'] = {
-			label = 'SNS Pistol',
-			weight = 465,
-			durability = 0.1,
-			ammoname = 'ammo-45'
+			label = 'SNS Pistole',
+			description = 'Eine kleine, kompakte Pistole.',
+			weight = 400,
+			durability = 0.6,
+			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_SNSPISTOL_MK2'] = {
-			label = 'SNS Pistol MK2',
-			weight = 465,
-			durability = 0.1,
-			ammoname = 'ammo-45'
+			label = 'SNS Pistole MK2',
+			description = 'Eine verbesserte Version der SNS Pistole.',
+			weight = 400,
+			durability = 0.6,
+			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_SPECIALCARBINE'] = {
-			label = 'Special Carbine',
-			weight = 3000,
-			durability = 0.03,
+			label = 'Spezialkarabiner',
+			description = 'Ein vielseitiger Karabiner.',
+			weight = 3500,
+			durability = 0.8,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_SPECIALCARBINE_MK2'] = {
-			label = 'Special Carbine MK2',
-			weight = 3370,
-			durability = 0.03,
+			label = 'Spezialkarabiner MK2',
+			description = 'Eine verbesserte Version des Spezialkarabiners.',
+			weight = 3500,
+			durability = 0.8,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_STICKYBOMB'] = {
-			label = 'Sticky Bomb',
+			label = 'Klebebombe',
+			description = 'Eine Bombe, die an Oberflächen haftet.',
 			weight = 1000,
 			throwable = true,
 		},
 
 		['WEAPON_STONE_HATCHET'] = {
-			label = 'Stone Hatchet',
+			label = 'Steinaxt',
+			description = 'Eine primitive Axt aus Stein.',
 			weight = 800,
-			durability = 0.1,
+			durability = 0.5,
 		},
 
 		['WEAPON_STUNGUN'] = {
-			label = 'Tazer',
-			weight = 227,
-			durability = 0.1,
+			label = 'Taser',
+			description = 'Eine nicht-tödliche Elektroschockwaffe.',
+			weight = 500,
+			durability = 0.6,
 		},
 
 		['WEAPON_AUTOSHOTGUN'] = {
-			label = 'Sweeper Shotgun',
-			weight = 4400,
-			durability = 0.05,
+			label = 'Automatische Schrotflinte',
+			description = 'Eine vollautomatische Schrotflinte.',
+			weight = 4500,
+			durability = 0.7,
 			ammoname = 'ammo-shotgun'
 		},
 
 		['WEAPON_SWITCHBLADE'] = {
-			label = 'Switchblade',
-			weight = 300,
-			durability = 0.1,
+			label = 'Springmesser',
+			description = 'Ein kompaktes, klappbares Messer.',
+			weight = 200,
+			durability = 0.5,
 			anim = { 'anim@melee@switchblade@holster', 'unholster', 200, 'anim@melee@switchblade@holster', 'holster', 600 },
 		},
 
 		['WEAPON_VINTAGEPISTOL'] = {
-			label = 'Vintage Pistol',
-			weight = 700,
-			durability = 0.1,
+			label = 'Vintage Pistole',
+			description = 'Eine Pistole im Vintage-Stil.',
+			weight = 800,
+			durability = 0.6,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_RAYMINIGUN'] = {
 			label = 'Widowmaker',
+			description = 'Eine leistungsstarke Laserwaffe.',
 			weight = 7000,
-			durability = 0.1,
+			durability = 0.9,
 			ammoname = 'ammo-laser'
 		},
 
 		['WEAPON_WRENCH'] = {
-			label = 'Wrench',
-			weight = 2500,
+			label = 'Schraubenschlüssel',
+			description = 'Ein Werkzeug zum Festziehen von Schrauben.',
+			weight = 1500,
 			durability = 0.1,
 		},
 
 		['WEAPON_PRECISIONRIFLE'] = {
-			label = 'Precision Rifle',
-			weight = 4800,
+			label = 'Präzisionsgewehr',
+			description = 'Ein Gewehr für präzise Schüsse.',
+			weight = 5000,
 			durability = 0.4,
 			ammoname = 'ammo-sniper'
 		},
 
 		['WEAPON_TACTICALRIFLE'] = {
-			label = 'Tactical Rifle',
-			weight = 3400,
-			durability = 0.03,
+			label = 'Taktisches Gewehr',
+			description = 'Ein vielseitiges taktisches Gewehr.',
+			weight = 3500,
+			durability = 0.16,
 			ammoname = 'ammo-rifle'
 		},
 
 		['WEAPON_TEARGAS'] = {
-			label = 'Tear Gas',
-			weight = 600,
+			label = 'Tränengas',
+			description = 'Eine Granate, die Tränengas freisetzt.',
+			weight = 500,
 			throwable = true,
 		},
+
 	},
 
 	Components = {
 		['at_flashlight'] = {
-			label = 'Tactical Flashlight',
-			weight = 120,
+			label = 'Taschenlampe',
+			description = 'Eine taktische Taschenlampe für bessere Sicht.',
+			weight = 150,
 			type = 'flashlight',
 			client = {
 				component = {
@@ -731,32 +843,34 @@ return {
 					`COMPONENT_AT_PI_FLSH_02`,
 					`COMPONENT_AT_PI_FLSH_03`,
 				},
-				usetime = 2500
+				usetime = 2000
 			}
 		},
-
+	
 		['at_suppressor_light'] = {
-			label = 'Suppressor',
-			weight = 280,
+			label = 'Schalldämpfer',
+			description = 'Ein leichter Schalldämpfer für Pistolen.',
+			weight = 200,
 			type = 'muzzle',
 			client = {
-                image = 'at_suppressor.png',
+				image = 'at_suppressor.webp',
 				component = {
 					`COMPONENT_AT_PI_SUPP`,
 					`COMPONENT_AT_PI_SUPP_02`,
 					`COMPONENT_CERAMICPISTOL_SUPP`,
 					`COMPONENT_PISTOLXM3_SUPP`
 				},
-				usetime = 2500
+				usetime = 2000
 			}
 		},
-
+	
 		['at_suppressor_heavy'] = {
-			label = 'Tactical Suppressor',
-			weight = 280,
+			label = 'Taktischer Schalldämpfer',
+			description = 'Ein schwerer Schalldämpfer für Gewehre.',
+			weight = 300,
 			type = 'muzzle',
 			client = {
-                image = 'at_suppressor.png',
+				image = 'at_suppressor.webp',
 				component = {
 					`COMPONENT_AT_AR_SUPP`,
 					`COMPONENT_AT_AR_SUPP_02`,
@@ -766,24 +880,26 @@ return {
 				usetime = 2500
 			}
 		},
-
+	
 		['at_grip'] = {
-			label = 'Grip',
+			label = 'Griff',
+			description = 'Ein Griff für bessere Stabilität.',
 			type = 'grip',
-			weight = 280,
+			weight = 100,
 			client = {
 				component = {
 					`COMPONENT_AT_AR_AFGRIP`,
 					`COMPONENT_AT_AR_AFGRIP_02`
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_barrel'] = {
-			label = 'Heavy Barrel',
+			label = 'Schwerer Lauf',
+			description = 'Ein schwerer Lauf für erhöhte Präzision.',
 			type = 'barrel',
-			weight = 280,
+			weight = 400,
 			client = {
 				component = {
 					`COMPONENT_AT_AR_BARREL_02`,
@@ -795,16 +911,17 @@ return {
 					`COMPONENT_AT_SC_BARREL_02`,
 					`COMPONENT_AT_SR_BARREL_02`,
 				},
-				usetime = 2500
+				usetime = 3000
 			}
 		},
-
+	
 		['at_clip_extended_pistol'] = {
-			label = 'Extended Pistol Clip',
+			label = 'Erweitertes Pistolenmagazin',
+			description = 'Ein erweitertes Magazin für Pistolen.',
 			type = 'magazine',
-			weight = 280,
+			weight = 50,
 			client = {
-                image = 'at_clip_extended.png',
+				image = 'at_clip_extended.webp',
 				component = {
 					`COMPONENT_APPISTOL_CLIP_02`,
 					`COMPONENT_CERAMICPISTOL_CLIP_02`,
@@ -816,18 +933,19 @@ return {
 					`COMPONENT_SNSPISTOL_CLIP_02`,
 					`COMPONENT_SNSPISTOL_MK2_CLIP_02`,
 					`COMPONENT_VINTAGEPISTOL_CLIP_02`,
-                    `COMPONENT_TECPISTOL_CLIP_02`,
+					`COMPONENT_TECPISTOL_CLIP_02`,
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_clip_extended_smg'] = {
-			label = 'Extended SMG Clip',
+			label = 'Erweitertes SMG-Magazin',
+			description = 'Ein erweitertes Magazin für SMGs.',
 			type = 'magazine',
-			weight = 280,
+			weight = 100,
 			client = {
-                image = 'at_clip_extended.png',
+				image = 'at_clip_extended.webp',
 				component = {
 					`COMPONENT_ASSAULTSMG_CLIP_02`,
 					`COMPONENT_COMBATPDW_CLIP_02`,
@@ -837,30 +955,32 @@ return {
 					`COMPONENT_SMG_CLIP_02`,
 					`COMPONENT_SMG_MK2_CLIP_02`,
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_clip_extended_shotgun'] = {
-			label = 'Extended Shotgun Clip',
+			label = 'Erweitertes Schrotflintenmagazin',
+			description = 'Ein erweitertes Magazin für Schrotflinten.',
 			type = 'magazine',
-			weight = 280,
+			weight = 150,
 			client = {
-                image = 'at_clip_extended2.png',
+				image = 'at_clip_extended2.webp',
 				component = {
 					`COMPONENT_ASSAULTSHOTGUN_CLIP_02`,
 					`COMPONENT_HEAVYSHOTGUN_CLIP_02`,
 				},
-				usetime = 2500
+				usetime = 2000
 			}
 		},
-
+	
 		['at_clip_extended_rifle'] = {
-			label = 'Extended Rifle Clip',
+			label = 'Erweitertes Gewehrmagazin',
+			description = 'Ein erweitertes Magazin für Gewehre.',
 			type = 'magazine',
-			weight = 280,
+			weight = 200,
 			client = {
-                image = 'at_clip_extended2.png',
+				image = 'at_clip_extended2.webp',
 				component = {
 					`COMPONENT_ADVANCEDRIFLE_CLIP_02`,
 					`COMPONENT_ASSAULTRIFLE_CLIP_02`,
@@ -877,16 +997,17 @@ return {
 					`COMPONENT_TACTICALRIFLE_CLIP_02`,
 					`COMPONENT_BATTLERIFLE_CLIP_02`,
 				},
-				usetime = 2500
+				usetime = 2000
 			}
 		},
-
+	
 		['at_clip_extended_mg'] = {
-			label = 'Extended MG Clip',
+			label = 'Erweitertes MG-Magazin',
+			description = 'Ein erweitertes Magazin für Maschinengewehre.',
 			type = 'magazine',
-			weight = 280,
+			weight = 300,
 			client = {
-                image = 'at_clip_drum.png',
+				image = 'at_clip_drum.webp',
 				component = {
 					`COMPONENT_GUSENBERG_CLIP_02`,
 					`COMPONENT_MG_CLIP_02`,
@@ -896,13 +1017,14 @@ return {
 				usetime = 2500
 			}
 		},
-
+	
 		['at_clip_extended_sniper'] = {
-			label = 'Extended Sniper Clip',
+			label = 'Erweitertes Scharfschützenmagazin',
+			description = 'Ein erweitertes Magazin für Scharfschützengewehre.',
 			type = 'magazine',
-			weight = 280,
+			weight = 250,
 			client = {
-                image = 'at_clip_extended2.png',
+				image = 'at_clip_extended2.webp',
 				component = {
 					`COMPONENT_HEAVYSNIPER_MK2_CLIP_02`,
 					`COMPONENT_MARKSMANRIFLE_CLIP_02`,
@@ -911,69 +1033,74 @@ return {
 				usetime = 2500
 			}
 		},
-
+	
 		['at_clip_drum_smg'] = {
-			label = 'SMG Drum',
+			label = 'SMG-Trommelmagazin',
+			description = 'Ein Trommelmagazin für SMGs.',
 			type = 'magazine',
-			weight = 280,
+			weight = 350,
 			client = {
-                image = 'at_clip_drum.png',
+				image = 'at_clip_drum.webp',
 				component = {
 					`COMPONENT_COMBATPDW_CLIP_03`,
 					`COMPONENT_MACHINEPISTOL_CLIP_03`,
 					`COMPONENT_SMG_CLIP_03`,
 				},
-				usetime = 2500
+				usetime = 3000
 			}
 		},
-
+	
 		['at_clip_drum_shotgun'] = {
-			label = 'Shotgun Drum',
+			label = 'Schrotflinten-Trommelmagazin',
+			description = 'Ein Trommelmagazin für Schrotflinten.',
 			type = 'magazine',
-			weight = 280,
+			weight = 400,
 			client = {
-                image = 'at_clip_drum.png',
+				image = 'at_clip_drum.webp',
 				component = {
 					`COMPONENT_HEAVYSHOTGUN_CLIP_03`
 				},
-				usetime = 2500
+				usetime = 3000
 			}
 		},
-
+	
 		['at_clip_drum_rifle'] = {
-			label = 'Rifle Drum',
+			label = 'Gewehr-Trommelmagazin',
+			description = 'Ein Trommelmagazin für Gewehre.',
 			type = 'magazine',
-			weight = 280,
+			weight = 450,
 			client = {
-                image = 'at_clip_drum.png',
+				image = 'at_clip_drum.webp',
 				component = {
 					`COMPONENT_ASSAULTRIFLE_CLIP_03`,
 					`COMPONENT_COMPACTRIFLE_CLIP_03`,
 					`COMPONENT_CARBINERIFLE_CLIP_03`,
 					`COMPONENT_SPECIALCARBINE_CLIP_03`,
 				},
-				usetime = 2500
+				usetime = 3000
 			}
 		},
-
+	
 		['at_compensator'] = {
-			label = 'Compensator',
+			label = 'Kompressor',
+			description = 'Ein Kompressor für reduzierte Rückstoß.',
 			type = 'muzzle',
-			weight = 280,
+			weight = 150,
 			client = {
 				component = {
 					`COMPONENT_AT_PI_COMP`,
 					`COMPONENT_AT_PI_COMP_02`,
 					`COMPONENT_AT_PI_COMP_03`
 				},
-				usetime = 2500
+				usetime = 2000
 			}
 		},
-
+	
 		['at_scope_macro'] = {
-			label = 'Macro Scope',
+			label = 'Makro-Visier',
+			description = 'Ein Makro-Visier für bessere Zielgenauigkeit.',
 			type = 'sight',
-			weight = 280,
+			weight = 200,
 			client = {
 				component = {
 					`COMPONENT_AT_SCOPE_MACRO`,
@@ -982,14 +1109,15 @@ return {
 					`COMPONENT_AT_SCOPE_MACRO_02_MK2`,
 					`COMPONENT_AT_SCOPE_MACRO_02_SMG_MK2`
 				},
-				usetime = 2500
+				usetime = 2000
 			}
 		},
-
+	
 		['at_scope_small'] = {
-			label = 'Small Scope',
+			label = 'Kleines Visier',
+			description = 'Ein kleines Visier für präzises Zielen.',
 			type = 'sight',
-			weight = 280,
+			weight = 150,
 			client = {
 				component = {
 					`COMPONENT_AT_SCOPE_SMALL`,
@@ -997,27 +1125,29 @@ return {
 					`COMPONENT_AT_SCOPE_SMALL_MK2`,
 					`COMPONENT_AT_SCOPE_SMALL_SMG_MK2`
 				},
-				usetime = 2500
+				usetime = 2000
 			}
 		},
-
+	
 		['at_scope_medium'] = {
-			label = 'Medium Scope',
+			label = 'Mittleres Visier',
+			description = 'Ein mittleres Visier für präzisere Schüsse.',
 			type = 'sight',
-			weight = 280,
+			weight = 150,
 			client = {
 				component = {
 					`COMPONENT_AT_SCOPE_MEDIUM`,
 					`COMPONENT_AT_SCOPE_MEDIUM_MK2`
 				},
-				usetime = 2500
+				usetime = 2000
 			}
 		},
-
+	
 		['at_scope_large'] = {
-			label = 'Large Scope',
+			label = 'Großes Visier',
+			description = 'Ein großes Visier für weite Entfernungen.',
 			type = 'sight',
-			weight = 280,
+			weight = 200,
 			client = {
 				component = {
 					`COMPONENT_AT_SCOPE_LARGE_MK2`
@@ -1025,47 +1155,51 @@ return {
 				usetime = 2500
 			}
 		},
-
+	
 		['at_scope_advanced'] = {
-			label = 'Advanced Scope',
+			label = 'Erweitertes Visier',
+			description = 'Ein erweitertes Visier für höchste Präzision.',
 			type = 'sight',
-			weight = 280,
+			weight = 180,
 			client = {
 				component = {
 					`COMPONENT_AT_SCOPE_MAX`
 				},
-				usetime = 2500
+				usetime = 3000
 			}
 		},
-
+	
 		['at_scope_nv'] = {
-			label = 'NV Scope',
+			label = 'NV Visier',
+			description = 'Ein Nachtsichtvisier für dunkle Umgebungen.',
 			type = 'sight',
-			weight = 420,
+			weight = 220,
 			client = {
 				component = {
 					`COMPONENT_AT_SCOPE_NV`
 				},
-				usetime = 2500
+				usetime = 3500
 			}
 		},
-
+	
 		['at_scope_thermal'] = {
-			label = 'Thermal Scope',
+			label = 'Thermisches Visier',
+			description = 'Ein thermisches Visier zur Erkennung von Wärmequellen.',
 			type = 'sight',
-			weight = 420,
+			weight = 250,
 			client = {
 				component = {
 					`COMPONENT_AT_SCOPE_THERMAL`
 				},
-				usetime = 2500
+				usetime = 4000
 			}
 		},
-
+	
 		['at_scope_holo'] = {
-			label = 'Holographic Sight',
+			label = 'Holographisches Visier',
+			description = 'Ein holographisches Visier für schnelle Zielerfassung.',
 			type = 'sight',
-			weight = 280,
+			weight = 120,
 			client = {
 				component = {
 					`COMPONENT_AT_PI_RAIL`,
@@ -1073,122 +1207,132 @@ return {
 					`COMPONENT_AT_SIGHTS`,
 					`COMPONENT_AT_SIGHTS_SMG`
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_muzzle_flat'] = {
-			label = 'Flat Muzzle',
+			label = 'Flacher Mündungsfeuerdämpfer',
+			description = 'Ein flacher Mündungsfeuerdämpfer zur Reduzierung des Mündungsfeuers.',
 			type = 'muzzle',
-			weight = 80,
+			weight = 50,
 			client = {
 				component = {
 					`COMPONENT_AT_MUZZLE_01`
 				},
-				usetime = 2500
+				usetime = 1000
 			}
 		},
-
+	
 		['at_muzzle_tactical'] = {
-			label = 'Tactical Muzzle',
+			label = 'Taktischer Mündungsfeuerdämpfer',
+			description = 'Ein taktischer Mündungsfeuerdämpfer für verbesserte Kontrolle.',
 			type = 'muzzle',
-			weight = 80,
+			weight = 60,
 			client = {
 				component = {
 					`COMPONENT_AT_MUZZLE_02`
 				},
-				usetime = 2500
+				usetime = 1200
 			}
 		},
-
+	
 		['at_muzzle_fat'] = {
-			label = 'Fat Muzzle',
+			label = 'Dicker Mündungsfeuerdämpfer',
+			description = 'Ein dicker Mündungsfeuerdämpfer zur Reduzierung des Rückstoßes.',
 			type = 'muzzle',
-			weight = 80,
+			weight = 70,
 			client = {
 				component = {
 					`COMPONENT_AT_MUZZLE_03`
 				},
-				usetime = 2500
+				usetime = 1300
 			}
 		},
-
+	
 		['at_muzzle_precision'] = {
-			label = 'Precision Muzzle',
+			label = 'Präzisions-Mündungsfeuerdämpfer',
+			description = 'Ein Präzisions-Mündungsfeuerdämpfer für erhöhte Genauigkeit.',
 			type = 'muzzle',
-			weight = 80,
+			weight = 55,
 			client = {
 				component = {
 					`COMPONENT_AT_MUZZLE_04`
 				},
-				usetime = 2500
+				usetime = 1100
 			}
 		},
-
+	
 		['at_muzzle_heavy'] = {
-			label = 'Heavy Muzzle',
+			label = 'Schwerer Mündungsfeuerdämpfer',
+			description = 'Ein schwerer Mündungsfeuerdämpfer für maximale Stabilität.',
 			type = 'muzzle',
 			weight = 80,
 			client = {
 				component = {
 					`COMPONENT_AT_MUZZLE_05`
 				},
-				usetime = 2500
+				usetime = 1400
 			}
 		},
-
+	
 		['at_muzzle_slanted'] = {
-			label = 'Slanted Muzzle',
+			label = 'Schräger Mündungsfeuerdämpfer',
+			description = 'Ein schräger Mündungsfeuerdämpfer für verbesserte Handhabung.',
 			type = 'muzzle',
-			weight = 80,
+			weight = 65,
 			client = {
 				component = {
 					`COMPONENT_AT_MUZZLE_06`
 				},
-				usetime = 2500
+				usetime = 1200
 			}
 		},
-
+	
 		['at_muzzle_split'] = {
-			label = 'Split Muzzle',
+			label = 'Geteilter Mündungsfeuerdämpfer',
+			description = 'Ein geteilter Mündungsfeuerdämpfer für reduzierte Mündungserhebung.',
 			type = 'muzzle',
-			weight = 80,
+			weight = 70,
 			client = {
 				component = {
 					`COMPONENT_AT_MUZZLE_07`
 				},
-				usetime = 2500
+				usetime = 1300
 			}
 		},
-
+	
 		['at_muzzle_squared'] = {
-			label = 'Squared Muzzle',
+			label = 'Quadratischer Mündungsfeuerdämpfer',
+			description = 'Ein quadratischer Mündungsfeuerdämpfer für erhöhte Präzision.',
 			type = 'muzzle',
-			weight = 80,
+			weight = 75,
 			client = {
 				component = {
 					`COMPONENT_AT_MUZZLE_08`
 				},
-				usetime = 2500
+				usetime = 1350
 			}
 		},
-
+	
 		['at_muzzle_bell'] = {
-			label = 'Bell Muzzle',
+			label = 'Glockenförmiger Mündungsfeuerdämpfer',
+			description = 'Ein glockenförmiger Mündungsfeuerdämpfer für verbesserte Kontrolle.',
 			type = 'muzzle',
 			weight = 80,
 			client = {
 				component = {
 					`COMPONENT_AT_MUZZLE_09`
 				},
-				usetime = 2500
+				usetime = 1400
 			}
 		},
-
+	
 		['at_skin_luxe'] = {
-			label = 'Luxury Weapon Kit',
+			label = 'Luxus-Waffenset',
+			description = 'Ein luxuriöses Waffenset für stilvolle Schützen.',
 			type = 'skin',
-			weight = 50,
+			weight = 30,
 			client = {
 				component = {
 					`COMPONENT_ASSAULTRIFLE_VARMOD_LUXE`,
@@ -1202,28 +1346,30 @@ return {
 					`COMPONENT_PUMPSHOTGUN_VARMOD_LOWRIDER`,
 					`COMPONENT_SMG_VARMOD_LUXE`
 				},
-				usetime = 2500
+				usetime = 2000
 			}
 		},
-
+	
 		['at_skin_wood'] = {
-			label = 'Wood Weapon Kit',
+			label = 'Holz-Waffenset',
+			description = 'Ein Waffenset mit Holzverzierungen.',
 			type = 'skin',
-			weight = 50,
+			weight = 25,
 			client = {
 				component = {
 					`COMPONENT_HEAVYPISTOL_VARMOD_LUXE`,
 					`COMPONENT_SNIPERRIFLE_VARMOD_LUXE`,
 					`COMPONENT_SNSPISTOL_VARMOD_LOWRIDER`
 				},
-				usetime = 2500
+				usetime = 1800
 			}
 		},
-
+	
 		['at_skin_metal'] = {
-			label = 'Metal Weapon Kit',
+			label = 'Metall-Waffenset',
+			description = 'Ein Waffenset mit Metallverzierungen.',
 			type = 'skin',
-			weight = 50,
+			weight = 35,
 			client = {
 				component = {
 					`COMPONENT_ADVANCEDRIFLE_VARMOD_LUXE`,
@@ -1232,305 +1378,330 @@ return {
 					`COMPONENT_SAWNOFFSHOTGUN_VARMOD_LUXE`,
 					`COMPONENT_SPECIALCARBINE_VARMOD_LOWRIDER`
 				},
-				usetime = 2500
+				usetime = 2200
 			}
 		},
-
+	
 		['at_skin_pearl'] = {
-			label = 'Pearl Weapon Kit',
+			label = 'Perlen-Waffenset',
+			description = 'Ein Waffenset mit Perlenverzierungen.',
 			type = 'skin',
-			weight = 50,
+			weight = 20,
 			client = {
 				component = {
 					`COMPONENT_PISTOL50_VARMOD_LUXE`
 				},
-				usetime = 2500
+				usetime = 1600
 			}
 		},
-
+	
 		['at_skin_ballas'] = {
-			label = 'Ballas Weapon Kit',
+			label = 'Ballas-Waffenset',
+			description = 'Ein Waffenset im Ballas-Stil.',
 			type = 'skin',
-			weight = 50,
+			weight = 25,
 			client = {
 				component = {
 					`COMPONENT_KNUCKLE_VARMOD_BALLAS`
 				},
-				usetime = 2500
+				usetime = 1800
 			}
 		},
-
+	
 		['at_skin_diamond'] = {
-			label = 'Diamond Weapon Kit',
+			label = 'Diamant-Waffenset',
+			description = 'Ein Waffenset mit Diamantverzierungen.',
 			type = 'skin',
-			weight = 50,
+			weight = 30,
 			client = {
 				component = {
 					`COMPONENT_KNUCKLE_VARMOD_DIAMOND`
 				},
-				usetime = 2500
+				usetime = 2000
 			}
 		},
-
+	
 		['at_skin_dollar'] = {
-			label = 'Dollar Weapon Kit',
+			label = 'Dollar-Waffenset',
+			description = 'Ein Waffenset mit Dollarverzierungen.',
 			type = 'skin',
-			weight = 50,
+			weight = 25,
 			client = {
 				component = {
 					`COMPONENT_KNUCKLE_VARMOD_DOLLAR`
 				},
-				usetime = 2500
+				usetime = 1800
 			}
 		},
-
+	
 		['at_skin_hate'] = {
-			label = 'Hate Weapon Kit',
+			label = 'Hass-Waffenset',
+			description = 'Ein Waffenset mit Hassverzierungen.',
 			type = 'skin',
-			weight = 50,
+			weight = 25,
 			client = {
 				component = {
 					`COMPONENT_KNUCKLE_VARMOD_HATE`
 				},
-				usetime = 2500
+				usetime = 1800
 			}
 		},
-
+	
 		['at_skin_king'] = {
-			label = 'King Weapon Kit',
+			label = 'König-Waffenset',
+			description = 'Ein Waffenset im König-Stil.',
 			type = 'skin',
-			weight = 50,
+			weight = 30,
 			client = {
 				component = {
 					`COMPONENT_KNUCKLE_VARMOD_KING`
 				},
-				usetime = 2500
+				usetime = 2000
 			}
 		},
-
+	
 		['at_skin_love'] = {
-			label = 'Love Weapon Kit',
+			label = 'Liebe-Waffenset',
+			description = 'Ein Waffenset mit Liebesverzierungen.',
 			type = 'skin',
-			weight = 50,
+			weight = 25,
 			client = {
 				component = {
 					`COMPONENT_KNUCKLE_VARMOD_LOVE`
 				},
-				usetime = 2500
+				usetime = 1800
 			}
 		},
-
+	
 		['at_skin_pimp'] = {
-			label = 'Pimp Weapon Kit',
+			label = 'Pimp-Waffenset',
+			description = 'Ein Waffenset im Pimp-Stil.',
 			type = 'skin',
-			weight = 50,
+			weight = 30,
 			client = {
 				component = {
 					`COMPONENT_KNUCKLE_VARMOD_PIMP`
 				},
-				usetime = 2500
+				usetime = 2000
 			}
 		},
-
+	
 		['at_skin_player'] = {
-			label = 'Player Weapon Kit',
+			label = 'Spieler-Waffenset',
+			description = 'Ein Waffenset im Spieler-Stil.',
 			type = 'skin',
-			weight = 50,
+			weight = 25,
 			client = {
 				component = {
 					`COMPONENT_KNUCKLE_VARMOD_PLAYER`
 				},
-				usetime = 2500
+				usetime = 1800
 			}
 		},
-
+	
 		['at_skin_vagos'] = {
-			label = 'Vagos Weapon Kit',
+			label = 'Vagos-Waffenset',
+			description = 'Ein Waffenset im Vagos-Stil.',
 			type = 'skin',
-			weight = 50,
+			weight = 25,
 			client = {
 				component = {
 					`COMPONENT_KNUCKLE_VARMOD_VAGOS`
 				},
-				usetime = 2500
+				usetime = 1800
 			}
 		},
-
+	
 		['at_skin_blagueurs'] = {
-			label = 'Blagueurs Weapon Kit',
+			label = 'Blagueurs-Waffenset',
+			description = 'Ein Waffenset im Blagueurs-Stil.',
 			type = 'skin',
-			weight = 50,
+			weight = 25,
 			client = {
 				component = {
 					`COMPONENT_BAT_VARMOD_XM3`
 				},
-				usetime = 2500
+				usetime = 1800
 			}
 		},
-
+	
 		['at_skin_splatter'] = {
-			label = 'Splatter Weapon Kit',
+			label = 'Spritzer-Waffenset',
+			description = 'Ein Waffenset mit Spritzverzierungen.',
 			type = 'skin',
-			weight = 50,
+			weight = 25,
 			client = {
 				component = {
 					`COMPONENT_BAT_VARMOD_XM3_01`
 				},
-				usetime = 2500
+				usetime = 1800
 			}
 		},
-
+	
 		['at_skin_bulletholes'] = {
-			label = 'Bullet Holes Weapon Kit',
+			label = 'Kugellöcher-Waffenset',
+			description = 'Ein Waffenset mit Kugellöcherverzierungen.',
 			type = 'skin',
-			weight = 50,
+			weight = 25,
 			client = {
 				component = {
 					`COMPONENT_BAT_VARMOD_XM3_02`
 				},
-				usetime = 2500
+				usetime = 1800
 			}
 		},
-
+	
 		['at_skin_burgershot'] = {
-			label = 'Burger Shot Weapon Kit',
+			label = 'Burger Shot-Waffenset',
+			description = 'Ein Waffenset im Burger Shot-Stil.',
 			type = 'skin',
-			weight = 50,
+			weight = 25,
 			client = {
 				component = {
 					`COMPONENT_BAT_VARMOD_XM3_03`
 				},
-				usetime = 2500
+				usetime = 1800
 			}
 		},
-
+	
 		['at_skin_cluckinbell'] = {
-			label = 'Cluckin Bell Weapon Kit',
+			label = 'Cluckin Bell-Waffenset',
+			description = 'Ein Waffenset im Cluckin Bell-Stil.',
 			type = 'skin',
-			weight = 50,
+			weight = 25,
 			client = {
 				component = {
 					`COMPONENT_BAT_VARMOD_XM3_04`
 				},
-				usetime = 2500
+				usetime = 1800
 			}
 		},
-
+	
 		['at_skin_fatalincursion'] = {
-			label = 'Fatal Incursion Weapon Kit',
+			label = 'Fatal Incursion-Waffenset',
+			description = 'Ein Waffenset im Fatal Incursion-Stil.',
 			type = 'skin',
-			weight = 50,
+			weight = 25,
 			client = {
 				component = {
 					`COMPONENT_BAT_VARMOD_XM3_05`
 				},
-				usetime = 2500
+				usetime = 1800
 			}
 		},
-
+	
 		['at_skin_luchalibre'] = {
-			label = 'Lucha Libre Weapon Kit',
+			label = 'Lucha Libre-Waffenset',
+			description = 'Ein Waffenset im Lucha Libre-Stil.',
 			type = 'skin',
-			weight = 50,
+			weight = 25,
 			client = {
 				component = {
 					`COMPONENT_BAT_VARMOD_XM3_06`
 				},
-				usetime = 2500
+				usetime = 1800
 			}
 		},
-
+	
 		['at_skin_trippy'] = {
-			label = 'Trippy Weapon Kit',
+			label = 'Trippy-Waffenset',
+			description = 'Ein Waffenset mit psychedelischen Verzierungen.',
 			type = 'skin',
-			weight = 50,
+			weight = 25,
 			client = {
 				component = {
 					`COMPONENT_BAT_VARMOD_XM3_07`
 				},
-				usetime = 2500
+				usetime = 1800
 			}
 		},
-
+	
 		['at_skin_tiedye'] = {
-			label = 'Tie-Dye Weapon Kit',
+			label = 'Tie-Dye Waffenset',
+			description = 'Ein Set mit Tie-Dye Waffenkomponenten.',
 			type = 'skin',
-			weight = 50,
+			weight = 5,
 			client = {
 				component = {
 					`COMPONENT_BAT_VARMOD_XM3_08`
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_skin_wall'] = {
-			label = 'Wall Weapon Kit',
+			label = 'Wand Waffenset',
+			description = 'Ein Set mit Wand Waffenkomponenten.',
 			type = 'skin',
-			weight = 50,
+			weight = 5,
 			client = {
 				component = {
 					`COMPONENT_BAT_VARMOD_XM3_09`
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_skin_vip'] = {
-			label = 'VIP Weapon Kit',
+			label = 'VIP Waffenset',
+			description = 'Ein Set mit VIP Waffenkomponenten.',
 			type = 'skin',
-			weight = 50,
+			weight = 5,
 			client = {
 				component = {
 					`COMPONENT_REVOLVER_VARMOD_BOSS`,
 					`COMPONENT_SWITCHBLADE_VARMOD_VAR1`
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_skin_bodyguard'] = {
-			label = 'Bodyguard Weapon Kit',
+			label = 'Bodyguard Waffenset',
+			description = 'Ein Set mit Bodyguard Waffenkomponenten.',
 			type = 'skin',
-			weight = 50,
+			weight = 5,
 			client = {
 				component = {
 					`COMPONENT_REVOLVER_VARMOD_GOON`,
 					`COMPONENT_SWITCHBLADE_VARMOD_VAR2`
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_skin_festive'] = {
-			label = 'Festive Weapon Kit',
+			label = 'Festliches Waffenset',
+			description = 'Ein Set mit festlichen Waffenkomponenten.',
 			type = 'skin',
-			weight = 50,
+			weight = 5,
 			client = {
 				component = {
 					`COMPONENT_RAYPISTOL_VARMOD_XMAS18`
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_skin_security'] = {
-			label = 'Security Weapon Kit',
+			label = 'Sicherheits Waffenset',
+			description = 'Ein Set mit Sicherheits Waffenkomponenten.',
 			type = 'skin',
-			weight = 50,
+			weight = 5,
 			client = {
 				component = {
 					`COMPONENT_APPISTOL_VARMOD_SECURITY`,
 					`COMPONENT_MICROSMG_VARMOD_SECURITY`,
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_skin_camo'] = {
-			label = 'Camo Weapon Kit',
+			label = 'Tarn Waffenset',
+			description = 'Ein Set mit Tarn Waffenkomponenten.',
 			type = 'skin',
-			weight = 50,
+			weight = 5,
 			client = {
 				component = {
 					`COMPONENT_ASSAULTRIFLE_MK2_CAMO`,
@@ -1546,14 +1717,15 @@ return {
 					`COMPONENT_SNSPISTOL_MK2_CAMO`,
 					`COMPONENT_SPECIALCARBINE_MK2_CAMO`,
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_skin_brushstroke'] = {
-			label = 'Brushstroke Weapon Kit',
+			label = 'Pinselstrich Waffenset',
+			description = 'Ein Set mit Pinselstrich Waffenkomponenten.',
 			type = 'skin',
-			weight = 50,
+			weight = 5,
 			client = {
 				component = {
 					`COMPONENT_ASSAULTRIFLE_MK2_CAMO_02`,
@@ -1569,14 +1741,15 @@ return {
 					`COMPONENT_SNSPISTOL_MK2_CAMO_02`,
 					`COMPONENT_SPECIALCARBINE_MK2_CAMO_02`,
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_skin_woodland'] = {
-			label = 'Woodland Weapon Kit',
+			label = 'Wald Waffenset',
+			description = 'Ein Set mit Wald Waffenkomponenten.',
 			type = 'skin',
-			weight = 50,
+			weight = 5,
 			client = {
 				component = {
 					`COMPONENT_ASSAULTRIFLE_MK2_CAMO_03`,
@@ -1592,14 +1765,15 @@ return {
 					`COMPONENT_SNSPISTOL_MK2_CAMO_03`,
 					`COMPONENT_SPECIALCARBINE_MK2_CAMO_03`,
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_skin_skull'] = {
-			label = 'Skull Weapon Kit',
+			label = 'Schädel Waffenset',
+			description = 'Ein Set mit Schädel Waffenkomponenten.',
 			type = 'skin',
-			weight = 50,
+			weight = 5,
 			client = {
 				component = {
 					`COMPONENT_ASSAULTRIFLE_MK2_CAMO_04`,
@@ -1615,14 +1789,15 @@ return {
 					`COMPONENT_SNSPISTOL_MK2_CAMO_04`,
 					`COMPONENT_SPECIALCARBINE_MK2_CAMO_04`,
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_skin_sessanta'] = {
-			label = 'Sessanta Weapon Kit',
+			label = 'Sessanta Waffenset',
+			description = 'Ein Set mit Sessanta Waffenkomponenten.',
 			type = 'skin',
-			weight = 50,
+			weight = 5,
 			client = {
 				component = {
 					`COMPONENT_ASSAULTRIFLE_MK2_CAMO_05`,
@@ -1638,14 +1813,15 @@ return {
 					`COMPONENT_SNSPISTOL_MK2_CAMO_05`,
 					`COMPONENT_SPECIALCARBINE_MK2_CAMO_05`,
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_skin_perseus'] = {
-			label = 'Perseus Weapon Kit',
+			label = 'Perseus Waffenset',
+			description = 'Ein Set mit Perseus Waffenkomponenten.',
 			type = 'skin',
-			weight = 50,
+			weight = 5,
 			client = {
 				component = {
 					`COMPONENT_ASSAULTRIFLE_MK2_CAMO_06`,
@@ -1661,14 +1837,15 @@ return {
 					`COMPONENT_SNSPISTOL_MK2_CAMO_06`,
 					`COMPONENT_SPECIALCARBINE_MK2_CAMO_06`,
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_skin_leopard'] = {
-			label = 'Leopard Weapon Kit',
+			label = 'Leopard Waffenset',
+			description = 'Ein Set mit Leopard Waffenkomponenten.',
 			type = 'skin',
-			weight = 50,
+			weight = 5,
 			client = {
 				component = {
 					`COMPONENT_ASSAULTRIFLE_MK2_CAMO_07`,
@@ -1684,14 +1861,15 @@ return {
 					`COMPONENT_SNSPISTOL_MK2_CAMO_07`,
 					`COMPONENT_SPECIALCARBINE_MK2_CAMO_07`,
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_skin_zebra'] = {
-			label = 'Zebra Weapon Kit',
+			label = 'Zebra Waffenset',
+			description = 'Ein Set mit Zebra Waffenkomponenten.',
 			type = 'skin',
-			weight = 50,
+			weight = 5,
 			client = {
 				component = {
 					`COMPONENT_ASSAULTRIFLE_MK2_CAMO_08`,
@@ -1707,14 +1885,15 @@ return {
 					`COMPONENT_SNSPISTOL_MK2_CAMO_08`,
 					`COMPONENT_SPECIALCARBINE_MK2_CAMO_08`,
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_skin_geometric'] = {
-			label = 'Geometric Weapon Kit',
+			label = 'Geometrisch Waffenset',
+			description = 'Ein Set mit geometrischen Waffenkomponenten.',
 			type = 'skin',
-			weight = 50,
+			weight = 5,
 			client = {
 				component = {
 					`COMPONENT_ASSAULTRIFLE_MK2_CAMO_09`,
@@ -1730,14 +1909,15 @@ return {
 					`COMPONENT_SNSPISTOL_MK2_CAMO_09`,
 					`COMPONENT_SPECIALCARBINE_MK2_CAMO_09`,
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_skin_boom'] = {
-			label = 'Boom Weapon Kit',
+			label = 'Boom Waffenset',
+			description = 'Ein Set mit Boom Waffenkomponenten.',
 			type = 'skin',
-			weight = 50,
+			weight = 5,
 			client = {
 				component = {
 					`COMPONENT_ASSAULTRIFLE_MK2_CAMO_10`,
@@ -1753,14 +1933,15 @@ return {
 					`COMPONENT_SNSPISTOL_MK2_CAMO_10`,
 					`COMPONENT_SPECIALCARBINE_MK2_CAMO_10`,
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
-
+	
 		['at_skin_patriotic'] = {
-			label = 'Patriotic Weapon Kit',
+			label = 'Patriotisch Waffenset',
+			description = 'Ein Set mit patriotischen Waffenkomponenten.',
 			type = 'skin',
-			weight = 50,
+			weight = 5,
 			client = {
 				component = {
 					`COMPONENT_ASSAULTRIFLE_MK2_CAMO_IND_01`,
@@ -1776,105 +1957,95 @@ return {
 					`COMPONENT_SNSPISTOL_MK2_CAMO_IND_01`,
 					`COMPONENT_SPECIALCARBINE_MK2_CAMO_IND_01`,
 				},
-				usetime = 2500
+				usetime = 1500
 			}
 		},
 	},
 
 	Ammo = {
-		['ammo-22'] = {
-			label = '.22 Long Rifle',
-			weight = 3,
-		},
-
-		['ammo-38'] = {
-			label = '.38 LC',
-			weight = 15,
-		},
-
-		['ammo-44'] = {
-			label = '.44 Magnum',
-			weight = 16,
-		},
-
-		['ammo-45'] = {
-			label = '.45 ACP',
-			weight = 15,
-		},
 
 		['ammo-50'] = {
 			label = '.50 AE',
-			weight = 45,
+			weight = 25,
+			description = 'Besondere Kugeln für die .50 Cal Pistole',
 		},
-
+	
 		['ammo-9'] = {
 			label = '9mm',
-			weight = 7,
+			weight = 12,
+			description = 'Kugeln für alle gängigen Pistolen',
 		},
-
+	
 		['ammo-firework'] = {
-			label = 'Firework',
-			weight = 200,
-		},
-
-		['ammo-flare'] = {
-			label = 'Flare round',
-			weight = 38,
-		},
-
-		['ammo-grenade'] = {
-			label = '40mm Explosive',
-			weight = 400,
-		},
-
-		['ammo-heavysniper'] = {
-			label = '.50 BMG',
-			weight = 51,
-		},
-
-		['ammo-laser'] = {
-			label = 'Laser charge',
-			weight = 1,
-		},
-
-		['ammo-musket'] = {
-			label = '.50 Ball',
-			weight = 38,
-		},
-
-		['ammo-railgun'] = {
-			label = 'Railgun charge',
+			label = 'Feuerwerk',
 			weight = 150,
+			description = 'Munition für Feuerwerkskörper',
 		},
-
+	
+		['ammo-flare'] = {
+			label = 'Leuchtkugel',
+			weight = 50,
+			description = 'Munition für Leuchtpistolen',
+		},
+	
+		['ammo-grenade'] = {
+			label = '40mm Explosiv',
+			weight = 300,
+			description = 'Explosive Munition für Granatwerfer',
+		},
+	
+		['ammo-laser'] = {
+			label = 'Laserladung',
+			weight = 5,
+			description = 'Energiezellen für Laserwaffen',
+		},
+	
+		['ammo-musket'] = {
+			label = '.50 Kugel',
+			weight = 20,
+			description = 'Kugeln für Musketen',
+		},
+	
+		['ammo-railgun'] = {
+			label = 'Railgun-Ladung',
+			weight = 100,
+			description = 'Energiezellen für Railguns',
+		},
+	
 		['ammo-rifle'] = {
-			label = '5.56x45',
-			weight = 4,
+			label = '5.56mm',
+			weight = 15,
+			description = 'Kugeln für alle gängigen Sturmgewehre',
 		},
-
+	
 		['ammo-rifle2'] = {
-			label = '7.62x39',
-			weight = 8,
+			label = '7.62mm',
+			weight = 20,
+			description = 'Kugeln für alle ausländischen Sturmgewehre',
 		},
-
+	
 		['ammo-rocket'] = {
-			label = 'Rocket',
-			weight = 500,
+			label = 'Rakete',
+			weight = 400,
+			description = 'Munition für Raketenwerfer',
 		},
-
+	
 		['ammo-shotgun'] = {
 			label = '12 Gauge',
-			weight = 38,
+			weight = 30,
+			description = 'Munition für alle gängigen Schrotflinten',
 		},
-
+	
 		['ammo-sniper'] = {
-			label = '7.62x51',
-			weight = 9,
+			label = '7.62mm',
+			weight = 25,
+			description = 'Kugeln für Scharfschützengewehre',
 		},
-
+	
 		['ammo-emp'] = {
-			label = 'EMP round',
-			weight = 400,
+			label = 'EMP-Ladung',
+			weight = 350,
+			description = 'Munition für EMP-Waffen',
 		},
 	}
 }

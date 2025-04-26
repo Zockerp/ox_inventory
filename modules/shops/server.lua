@@ -91,6 +91,7 @@ local function createShop(shopType, id)
         coords = store
     end
 
+	---@type OxShop
 	shop[id] = {
 		label = shop.name,
 		id = shopType..' '..id,

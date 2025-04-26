@@ -8,31 +8,63 @@ TriggerEvent('ox_inventory:itemList', ItemList)
 
 Items.containers = require 'modules.items.containers'
 
+
 -- Possible metadata when creating garbage
 local trash = {
-	{description = 'A discarded burger carton.', weight = 50, image = 'trash_burger'},
-	{description = 'An empty soda can.', weight = 20, image = 'trash_can'},
-	{description = 'A mouldy piece of bread.', weight = 70, image = 'trash_bread'},
-	{description = 'An empty chips bag.', weight = 5, image = 'trash_chips'},
-	{description = 'A slightly used pair of panties.', weight = 20, image = 'panties'},
-	{description = 'An old rolled up newspaper.', weight = 200, image = 'WEAPON_ACIDPACKAGE'},
+	{ description = 'Eine weggeworfene Burgerverpackung.', weight = 50,  image = 'trash_burger' },
+	{ description = 'Eine leere Getränkedose.',            weight = 20,  image = 'trash_can' },
+	{ description = 'Ein verschimmeltes Stück Brot.',      weight = 70,  image = 'trash_bread' },
+	{ description = 'Eine leere Chipstüte.',               weight = 5,   image = 'trash_chips' },
+	{ description = 'Ein Haufen chemischer Abfälle.',      weight = 200, image = 'waste_chemical' },
+	{ description = 'Ein kaputtes elektronisches Gerät.',  weight = 500, image = 'waste_electronic' },
+	{ description = 'Ein zerknülltes Stück Papier.',       weight = 10,  image = 'waste_paper' },
+	{ description = 'Ein recycelbarer Abfall.',            weight = 150, image = 'waste_recyclable' },
+	{ description = 'Ein Stück Metallschrott.',            weight = 300, image = 'waste_metal' },
+}
+
+local canfood = {
+    {
+        description = 'Eine herzhafte Mahlzeit mit Würstchen und Bohnen.',
+        label = 'Würstchen und Bohnen',
+        image = 'campbowl_frank_and_bean',
+    },
+    {
+        description = 'Cremiges Kartoffelpüree, perfekt für unterwegs.',
+        label = 'Kartoffelpüree',
+        image = 'campbowl_mashed_potato',
+    },
+    {
+        description = 'Ein herzhafter Eintopf, ideal für kalte Tage.',
+        label = 'Herzhafter Eintopf',
+        image = 'campbowl_stew',
+    },
+    {
+        description = 'Eine warme und köstliche Tomatensuppe.',
+        label = 'Tomatensuppe',
+        image = 'campbowl_tomato_soup',
+    },
+    {
+        description = 'Eine gesunde und nahrhafte Gemüsesuppe.',
+        label = 'Gemüsesuppe',
+        image = 'campbowl_vegetable_soup',
+    },
 }
 
 ---@param _ table?
 ---@param name string?
 ---@return table?
 local function getItem(_, name)
-    if not name then return ItemList end
+	if not name then return ItemList end
 
 	if type(name) ~= 'string' then return end
 
-    name = name:lower()
+	name = name:lower()
 
-    if name:sub(0, 7) == 'weapon_' then
-        name = name:upper()
-    end
+	if name:sub(0, 7) == 'weapon_' then
+		name = name:upper()
+	end
 
-    return ItemList[name]
+	return ItemList[name]
 end
 
 setmetatable(Items --[[@as table]], {
@@ -51,7 +83,7 @@ local Inventory
 CreateThread(function()
 	Inventory = require 'modules.inventory.server'
 
-    if not lib then return end
+	if not lib then return end
 
 	if shared.framework == 'esx' then
 		local success, items = pcall(MySQL.query.await, 'SELECT * FROM items')
@@ -74,7 +106,7 @@ CreateThread(function()
 			end
 
 			if table.type(dump) ~= "empty" then
-				local file = {string.strtrim(LoadResourceFile(shared.resource, 'data/items.lua'))}
+				local file = { string.strtrim(LoadResourceFile(shared.resource, 'data/items.lua')) }
 				file[1] = file[1]:gsub('}$', '')
 
 				---@todo separate into functions for reusability, properly handle nil values
@@ -94,7 +126,8 @@ CreateThread(function()
 					if not ItemList[item.name] then
 						fileSize += 1
 
-						local itemStr = itemFormat:format(item.name, item.label, item.weight, item.stack, item.close, item.description and json.encode(item.description) or 'nil')
+						local itemStr = itemFormat:format(item.name, item.label, item.weight, item.stack, item.close,
+							item.description and json.encode(item.description) or 'nil')
 						-- temporary solution for nil values
 						itemStr = itemStr:gsub('[%s]-[%w]+ = "?nil"?,?', '')
 						file[fileSize] = itemStr
@@ -102,7 +135,7 @@ CreateThread(function()
 					end
 				end
 
-				file[fileSize+1] = '}'
+				file[fileSize + 1] = '}'
 
 				SaveResourceFile(shared.resource, 'data/items.lua', table.concat(file), -1)
 				shared.info(count, 'items have been copied from the database.')
@@ -130,7 +163,8 @@ end)
 
 local function GenerateText(num)
 	local str
-	repeat str = {}
+	repeat
+		str = {}
 		for i = 1, num do str[i] = string.char(math.random(65, 90)) end
 		str = table.concat(str)
 	until str ~= 'POL' and str ~= 'EMS'
@@ -142,14 +176,15 @@ local function GenerateSerial(text)
 		return text
 	end
 
-	return ('%s%s%s'):format(math.random(100000,999999), text == nil and GenerateText(3) or text, math.random(100000,999999))
+	return ('%s%s%s'):format(math.random(100000, 999999), text == nil and GenerateText(3) or text,
+		math.random(100000, 999999))
 end
 
 local function setItemDurability(item, metadata)
 	local degrade = item.degrade
 
 	if degrade then
-		metadata.durability = os.time()+(degrade * 60)
+		metadata.durability = os.time() + (degrade * 60)
 		metadata.degrade = degrade
 	elseif item.durability then
 		metadata.durability = 100
@@ -168,7 +203,10 @@ local TriggerEventHooks = require 'modules.hooks.server'
 ---Generates metadata for new items being created through AddItem, buyItem, etc.
 function Items.Metadata(inv, item, metadata, count)
 	if type(inv) ~= 'table' then inv = Inventory(inv) end
-	if not item.weapon then metadata = not metadata and {} or type(metadata) == 'string' and {type=metadata} or metadata end
+	if not item.weapon then
+		metadata = not metadata and {} or type(metadata) == 'string' and { type = metadata } or
+			metadata
+	end
 	if not count then count = 1 end
 
 	---@cast metadata table<string, any>
@@ -193,20 +231,26 @@ function Items.Metadata(inv, item, metadata, count)
 
 		if container then
 			count = 1
-			metadata.container = metadata.container or GenerateText(3)..os.time()
+			metadata.container = metadata.container or GenerateText(3) .. os.time()
 			metadata.size = container.size
 		elseif not next(metadata) then
-			if item.name == 'identification' then
+			if item.name == 'civil_identity' or item.name == 'driver_license' or item.name == 'firearms' or item.name == 'pd_identity' or item.name == 'ems_identity' or item.name == 'ls_custom' then
 				count = 1
 				metadata = {
 					type = inv.player.name,
-					description = locale('identification', (inv.player.sex) and locale('male') or locale('female'), inv.player.dateofbirth)
+					description = locale('identification', (inv.player.sex) and locale('male') or locale('female'),
+						inv.player.dateofbirth)
 				}
 			elseif item.name == 'garbage' then
 				local trashType = trash[math.random(1, #trash)]
 				metadata.image = trashType.image
 				metadata.weight = trashType.weight
 				metadata.description = trashType.description
+			elseif item.name == 'can_food' then
+				local canFoodType = canfood[math.random(1, #canfood)]
+				metadata.label = canFoodType.label
+				metadata.image = canFoodType.image
+				metadata.description = canFoodType.description
 			end
 		end
 
@@ -232,9 +276,15 @@ function Items.Metadata(inv, item, metadata, count)
 
 	if metadata.imageurl and Utils.IsValidImageUrl then
 		if Utils.IsValidImageUrl(metadata.imageurl) then
-			Utils.DiscordEmbed('Valid image URL', ('Created item "%s" (%s) with valid url in "%s".\n%s\nid: %s\nowner: %s'):format(metadata.label or item.label, item.name, inv.label, metadata.imageurl, inv.id, inv.owner, metadata.imageurl), metadata.imageurl, 65280)
+			Utils.DiscordEmbed('Valid image URL',
+				('Created item "%s" (%s) with valid url in "%s".\n%s\nid: %s\nowner: %s'):format(
+					metadata.label or item.label, item.name, inv.label, metadata.imageurl, inv.id, inv.owner,
+					metadata.imageurl), metadata.imageurl, 65280)
 		else
-			Utils.DiscordEmbed('Invalid image URL', ('Created item "%s" (%s) with invalid url in "%s".\n%s\nid: %s\nowner: %s'):format(metadata.label or item.label, item.name, inv.label, metadata.imageurl, inv.id, inv.owner, metadata.imageurl), metadata.imageurl, 16711680)
+			Utils.DiscordEmbed('Invalid image URL',
+				('Created item "%s" (%s) with invalid url in "%s".\n%s\nid: %s\nowner: %s'):format(
+					metadata.label or item.label, item.name, inv.label, metadata.imageurl, inv.id, inv.owner,
+					metadata.imageurl), metadata.imageurl, 16711680)
 			metadata.imageurl = nil
 		end
 	end
@@ -250,7 +300,7 @@ end
 function Items.CheckMetadata(metadata, item, name, ostime)
 	if metadata.bag then
 		metadata.container = metadata.bag
-		metadata.size = Items.containers[name]?.size or {5, 1000}
+		metadata.size = Items.containers[name]?.size or { 5, 1000 }
 		metadata.bag = nil
 	end
 
@@ -307,31 +357,31 @@ end
 ---@param ostime? number
 ---@return boolean? removed
 function Items.UpdateDurability(inv, slot, item, value, ostime)
-    local durability = slot.metadata.durability or value
+	local durability = slot.metadata.durability or value
 
-    if not durability then return end
+	if not durability then return end
 
-    if value then
-        durability = value
-    elseif ostime and durability > 100 and ostime >= durability then
-        durability = 0
-    end
+	if value then
+		durability = value
+	elseif ostime and durability > 100 and ostime >= durability then
+		durability = 0
+	end
 
-    if item.decay and durability == 0 then
-        return Inventory.RemoveItem(inv, slot.name, slot.count, nil, slot.slot)
-    end
+	if item.decay and durability == 0 then
+		return Inventory.RemoveItem(inv, slot.name, slot.count, nil, slot.slot)
+	end
 
-    if slot.metadata.durability == durability then return end
+	if slot.metadata.durability == durability then return end
 
-    inv.changed = true
-    slot.metadata.durability = durability
+	inv.changed = true
+	slot.metadata.durability = durability
 
-    inv:syncSlotsWithClients({
-        {
-            item = slot,
-            inventory = inv.id
-        }
-    }, true)
+	inv:syncSlotsWithClients({
+		{
+			item = slot,
+			inventory = inv.id
+		}
+	}, true)
 end
 
 ---@deprecated

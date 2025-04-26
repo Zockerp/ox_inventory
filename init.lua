@@ -19,11 +19,10 @@ shared = {
     playerweight = GetConvarInt('inventory:weight', 30000),
     target = GetConvarInt('inventory:target', 0) == 1,
     police = json.decode(GetConvar('inventory:police', '["police", "sheriff"]')),
-    networkdumpsters = GetConvarInt('inventory:networkdumpsters', 0) == 1
 }
 
 shared.dropslots = GetConvarInt('inventory:dropslots', shared.playerslots)
-shared.dropweight = GetConvarInt('inventory:dropweight', shared.playerweight)
+shared.dropweight = GetConvarInt('inventory:dropslotcount', shared.playerweight)
 
 do
     if type(shared.police) == 'string' then
@@ -109,44 +108,6 @@ else
     ignoreweapons[`WEAPON_HOSE`] = true
 
     client.ignoreweapons = ignoreweapons
-
-    local fallbackmarker = {
-        type = 0,
-        colour = {150, 150, 150},
-        scale = {0.5, 0.5, 0.5}
-    }
-
-    client.shopmarker = json.decode(GetConvar('inventory:shopmarker', [[
-        {
-            "type": 29,
-            "colour": [30, 150, 30],
-            "scale": [0.5, 0.5, 0.5]
-        }
-    ]])) or fallbackmarker
-
-    client.evidencemarker = json.decode(GetConvar('inventory:evidencemarker', [[
-        {
-            "type": 2,
-            "colour": [30, 30, 150],
-            "scale": [0.3, 0.2, 0.15]
-        }
-    ]])) or fallbackmarker
-
-    client.craftingmarker = json.decode(GetConvar('inventory:craftingmarker', [[
-        {
-            "type": 2,
-            "colour": [150, 150, 30],
-            "scale": [0.3, 0.2, 0.15]
-        }
-    ]])) or fallbackmarker
-
-    client.dropmarker = json.decode(GetConvar('inventory:dropmarker', [[
-        {
-            "type": 2,
-            "colour": [150, 30, 30],
-            "scale": [0.3, 0.2, 0.15]
-        }
-    ]])) or fallbackmarker
 end
 
 function shared.print(...) print(string.strjoin(' ', ...)) end
@@ -213,7 +174,7 @@ end
 local success, msg = lib.checkDependency('oxmysql', '2.7.3')
 
 if success then
-    success, msg = lib.checkDependency('ox_lib', '3.27.0')
+    success, msg = lib.checkDependency('ox_lib', '3.13.0')
 end
 
 if not success then
