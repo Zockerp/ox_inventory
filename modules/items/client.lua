@@ -385,6 +385,12 @@ Item('clothing', function(data, slot)
 	end)
 end)
 
+
+exports.ox_inventory:displayMetadata({
+	firstname="Vorname",
+	lastname="Nachname"
+})
+
 -----------------------------------------------------------------------------------------------
 
 exports('Items', function(item) return getItem(nil, item) end)
