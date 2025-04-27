@@ -13,7 +13,7 @@ const root = document.getElementById('root');
 
 if (isEnvBrowser()) {
   // https://i.imgur.com/iPTAdYV.png - Night time img
-  root!.style.backgroundImage = 'url("https://i.imgur.com/3pzRj9n.png")';
+  root!.style.backgroundImage = 'url("https://cdn.discordapp.com/attachments/1279138997309935811/1328540355506733066/Frame_4.png?ex=678b079f&is=6789b61f&hm=d64b9d8a0513dff980ef30c271ae6ffb2b0ac47df1c890e1a3bedea42df515fe&")';
   root!.style.backgroundSize = 'cover';
   root!.style.backgroundRepeat = 'no-repeat';
   root!.style.backgroundPosition = 'center';

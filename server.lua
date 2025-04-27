@@ -68,13 +68,14 @@ exports('setPlayerInventory', server.setPlayerInventory)
 AddEventHandler('ox_inventory:setPlayerInventory', server.setPlayerInventory)
 
 ---@param playerPed number
----@param coordinates vector3|vector3[]
----@param distance? number
----@return vector3|false
-local function getClosestStashCoords(playerPed, coordinates, distance)
+---@param stash OxInventory
+---@return vector3?
+local function getClosestStashCoords(playerPed, stash)
 	local playerCoords = GetEntityCoords(playerPed)
+	local distance = stash.distance or 10
+    local coordinates = stash.coords
 
-	if not distance then distance = 10 end
+    if not coordinates then return end
 
 	if type(coordinates) == 'table' then
 		for i = 1, #coordinates do
@@ -85,10 +86,10 @@ local function getClosestStashCoords(playerPed, coordinates, distance)
 			end
 		end
 
-		return false
+		return
 	end
 
-	return #(coordinates - playerCoords) < distance and coordinates
+	return #(coordinates - playerCoords) < distance and coordinates or nil
 end
 
 ---@param source number
@@ -133,10 +134,6 @@ local function openInventory(source, invType, data, ignoreSecurityChecks)
                     if not ignoreSecurityChecks and GetVehiclePedIsIn(playerPed, false) ~= entity then
                         return
                     end
-
-                    if not data.id then
-                        data.id = 'glove'..GetVehicleNumberPlateText(entity)
-                    end
                 end
 
                 if invType == 'trunk' then
@@ -146,9 +143,15 @@ local function openInventory(source, invType, data, ignoreSecurityChecks)
                     if lockStatus > 1 and lockStatus ~= 8 then
                         return false, false, 'vehicle_locked'
                     end
+                end
+
+                local plate = (invType == 'glovebox' or invType == 'trunk') and GetVehicleNumberPlateText(entity)
+
+                if plate then
+                    if server.trimplate then plate = string.strtrim(plate) end
 
                     if not data.id  then
-                        data.id = 'trunk'..GetVehicleNumberPlateText(entity)
+                        data.id = (invType == 'glovebox' and 'glove' or 'trunk') .. plate
                     end
                 end
 
@@ -156,7 +159,14 @@ local function openInventory(source, invType, data, ignoreSecurityChecks)
 				right = Inventory(data)
 
                 if right and data.netid ~= right.netid then
-                    return
+                    local invEntity = NetworkGetEntityFromNetworkId(right.netid)
+
+                    if invEntity > 0 and DoesEntityExist(invEntity) or plate and not string.match(GetVehicleNumberPlateText(invEntity) or '', plate) then
+                        return
+                    end
+
+                    Inventory.Remove(right)
+                    right = Inventory(data)
                 end
 			elseif invType == 'drop' then
 				right = Inventory(data.id)
@@ -217,7 +227,7 @@ local function openInventory(source, invType, data, ignoreSecurityChecks)
 		end
 
 		if not ignoreSecurityChecks and right.coords then
-			closestCoords = getClosestStashCoords(playerPed, right.coords)
+			closestCoords = getClosestStashCoords(playerPed, right)
 
 			if not closestCoords then return end
 		end

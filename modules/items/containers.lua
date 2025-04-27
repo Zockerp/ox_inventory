@@ -57,10 +57,10 @@ setContainerProperties('paperbag', {
 	blacklist = { 'testburger' }
 })
 
-setContainerProperties('wallet', {
-	slots = 8,
+setContainerProperties('pizzabox', {
+	slots = 5,
 	maxWeight = 1000,
-	whitelist = { 'money', 'black_money', 'pd_identity', 'ems_identity', 'civil_identity', 'driver_license', 'firearms', 'ls_custom'}
+	whitelist = { 'pizza' }
 })
 
 return containers

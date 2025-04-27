@@ -26,10 +26,11 @@ debugData([
         items: [
           {
             slot: 1,
-            name: 'iron',
+            name: 'cola',
             weight: 3000,
             metadata: {
               description: `name: Svetozar Miletic  \n Gender: Male`,
+              durability: 75,
               ammo: 3,
               mustard: '60%',
               ketchup: '30%',
@@ -37,14 +38,13 @@ debugData([
             },
             count: 5,
           },
-          { slot: 2, name: 'powersaw', weight: 0, count: 1, metadata: { durability: 75 } },
-          { slot: 3, name: 'copper', weight: 100, count: 12, metadata: { type: 'Special' } },
+
           {
-            slot: 4,
-            name: 'water',
+            slot: 7,
+            name: 'weapon_flaregun',
             weight: 100,
             count: 1,
-            metadata: { description: 'Generic item description' },
+            metadata: {durability: 75,label: 'Flaregun',description: 'Generic item description' },
           },
           { slot: 5, name: 'water', weight: 100, count: 1 },
           {

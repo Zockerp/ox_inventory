@@ -1,17 +1,20 @@
-$mainColor: #22232c;
-$textColor: #c1c2c5;
-$mainFont: Roboto;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+$mainColor: #2e2e2e;
+$textColor: #BDBDBD;
+$mainFont: Inter;
 
-$secondaryColor: rgba(12, 12, 12, 0.4);
+$secondaryColor: rgba(83, 83, 83,0.63);
 $secondaryColorHighlight: #33343F;
-$secondaryColorLight: rgba(0, 0, 0, 0.5);
-$secondaryColorDark: rgba(12, 12, 12, 0.8);
+$secondaryColorLight: rgba(255, 255, 255, 0.5);
+$secondaryColorDark: rgba(214, 214, 214, 0.8);
 
 $gridCols: 5;
-$gridRows: 5;
+$gridRows: 3;
+$secondarygridRows: 4;
 $gridSize: 10.2vh;
-$gridGap: 2px;
+$gridGap: 0.4vw;
 $containerSize: calc(#{$gridRows} * #{$gridSize + 0.22vh} + #{$gridRows} * #{$gridGap});
+$secondarycontainerSize: calc(#{$secondarygridRows} * #{$gridSize + 0.22vh} + #{$secondarygridRows} * #{$gridGap});
 
 body {
   margin: 0;
@@ -57,34 +60,37 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .context-menu-list {
-  min-width: 200px;
-  background-color: $mainColor;
-  color: $textColor;
-  padding: 4px;
-  border-color: rgba(0, 0, 0, 0.2);
-  border-style: inset;
-  border-width: 1px;
-  border-radius: 4px;
+
+
+
+
+gap: 4px;
   outline: none;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .context-menu-item  {
-  padding: 8px;
-  border-radius: 4px;
-  background-color: transparent;
+  min-width: 80px;
+  height: 40px;
+
+  background-color: $secondaryColorDark;
   outline: none;
   border: none;
-  color: $textColor;
+  color: $mainColor;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+
   &:active {
     transform: none;
   }
   &:hover {
-    background-color: $secondaryColorHighlight;
+    background-color: $secondaryColorLight;
     cursor: pointer;
   }
 }
@@ -121,27 +127,31 @@ button:active {
   justify-content: center;
   align-items: center;
   height: 100%;
-
-  gap: 20px;
+  background: linear-gradient(45deg, rgba(24,24,24,0.66) 0%, rgb(17, 17, 17) 100%);
+  gap: 3vw;
 }
 
 .inventory-control {
   display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1vw;
+
 
   .inventory-control-wrapper {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    gap:1vw;
     justify-content: center;
     align-items: center;
   }
 
   .inventory-control-input {
     transition: 200ms;
-    padding: 16px 8px;
-    border-radius: 2.5%;
+    width: 5vw;
+    height: 2vw;
     font-family: $mainFont;
-    font-size: 16px;
+    font-size: 1vw;
     text-align: center;
     outline: none;
     border: none;
@@ -153,17 +163,22 @@ button:active {
   }
 
   .inventory-control-button {
-    font-size: 14px;
     color: #fff;
     background-color: $secondaryColor;
     transition: 200ms;
-    padding: 12px 8px;
     border-radius: 2.5%;
     border: none;
     text-transform: uppercase;
     font-family: $mainFont;
-    width: 100%;
-    font-weight: 500;
+    width: 5vw;
+    height: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+
+    }
     &:hover {
       background-color: $secondaryColorDark;
     }
@@ -255,6 +270,34 @@ button:active {
 
 // Dialog is used fro useful controls window
 
+.verticalline{
+  position: relative;
+  top: 2vw;
+  left: .6vw;
+  height: calc(#{4.8}  * #{$gridSize + 0.22vh} + #{4.8} * #{$gridGap});
+  width: 2px;
+  background: linear-gradient(180deg, rgba(233, 233, 233, 0.4) 0%,  rgba(233, 233, 233, 0) 100%);
+}
+
+.line{
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(233, 233, 233, .4) 0%,  rgba(233, 233, 233, 0) 100%);
+}
+
+.playerinventory{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(#{5.5}  * #{$gridSize + 0.22vh} + #{5.5} * #{$gridGap});
+}
+
+.secondaryinventory{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(#{5.5}  * #{$gridSize + 0.22vh} + #{5.5} * #{$gridGap});
+}
 
 // inventory grids
 .inventory-grid-wrapper {
@@ -262,13 +305,32 @@ button:active {
   flex-direction: column;
   gap: calc($gridGap * 2);
 }
+
+.hotinventory-grid-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  gap: 1vw;
+
+}
+
 .inventory-grid-header-wrapper {
   display: flex;
   flex-direction: row;
+  align-items: end;
   justify-content: space-between;
-  p {
-    font-size: 16px;
+  margin: 0 1vw;
+
+  p{
+    color: $textColor;
+
   }
+  img{
+    width: 1.5vw;
+
+  }
+
 }
 
 .inventory-grid-container {
@@ -280,6 +342,51 @@ button:active {
   overflow-y: scroll;
 }
 
+
+
+.secinventory-grid-container{
+  @extend .inventory-grid-container;
+  height: $secondarycontainerSize;
+}
+
+
+.hotinventory-grid-container{
+  @extend .inventory-grid-container;
+  height: fit-content;
+  padding-top: 0.5vw;
+}
+
+.label-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 0.4vw;
+  p{
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $textColor;
+  }
+}
+
+.weight-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4vw;
+
+  img{
+    width: .9vw;
+  }
+  p{
+    font-size: 0.7vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $textColor;
+  }
+}
+
 // inventory slots
 .inventory-slot {
   background-color: $secondaryColor;
@@ -288,7 +395,7 @@ button:active {
   border-radius: 2.5%;
   image-rendering: -webkit-optimize-contrast;
   position: relative;
-  background-size: 7vh;
+  background-size: 5vh;
   color: $textColor;
   border-color: rgba(0, 0, 0, 0.2);
   border-style: inset;
@@ -296,14 +403,8 @@ button:active {
 }
 
 .inventory-slot-label-box {
-  background-color: $mainColor;
   color: $textColor;
   text-align: center;
-  border-bottom-left-radius: 0.25vh;
-  border-bottom-right-radius: 0.25vh;
-  border-top-color: rgba(0, 0, 0, 0.2);
-  border-top-style: inset;
-  border-top-width: 1px;
 }
 
 .inventory-slot-label-text {
@@ -311,20 +412,29 @@ button:active {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 2px 3px;
-  font-weight: 400;
+  padding: 0.2vw;
+
   font-family: $mainFont;
-  font-size: 12px;
+  font-size: 0.7vw;
+  font-weight: bold
 }
 
 .inventory-slot-number {
+  position: absolute;
+  left: 0.3vw;
+  top: -0.5vw;
+  border-radius: 100%;
   background-color: white;
   color: black;
-  height: 12px;
-  border-top-left-radius: 0.25vh;
-  border-bottom-right-radius: 0.25vh;
-  padding: 3px;
-  font-size: 12px;
+
+  width: 1vw;
+  height: 1vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .7vw;
+  font-weight: bold;
   font-family: $mainFont;
 }
 
@@ -333,32 +443,21 @@ button:active {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  p {
-    font-size: 12px;
-  }
+
 }
 
 .item-slot-header-wrapper {
+  p{
+    position: relative;
+    top: 0.3vw;
+    font-size: 0.7vw;
+    font-weight: bold
+  };
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
-.item-hotslot-header-wrapper {
-  @extend .item-slot-header-wrapper;
-  justify-content: space-between !important;
-}
-
-.item-slot-info-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-self: flex-end;
-  padding: 3px;
-  gap: 3px;
-  p {
-    font-size: 12px;
-  }
-}
 
 .item-slot-currency-wrapper {
   display: flex;
@@ -447,7 +546,7 @@ button:active {
 .hotbar-container {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 8px;
   justify-content: center;
   width: 100%;
   position: absolute;
@@ -504,18 +603,11 @@ button:active {
 }
 
 .durability-bar {
-  background: rgba(0, 0, 0, 0.5);
-  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  height: 0.2vw;
   overflow: hidden;
 }
 
-.weight-bar {
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px inset rgba(0, 0, 0, 0.1);
-  height: 0.8vh;
-  border-radius: 5%;
-  overflow: hidden;
-}
 
 .transition-fade-enter {
   opacity: 0;

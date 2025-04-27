@@ -201,15 +201,15 @@ function client.openInventory(inv, data)
 
             if not right?.items then return end
 
-            -- local coords, distance
+            local coords, distance
 
-            -- if not right.zones and not right.points then
-            --     coords = GetEntityCoords(cache.ped)
-            --     distance = 2
-            -- else
-            --     coords = shared.target and right.zones and right.zones[data.index].coords or right.points and right.points[data.index]
-            --     distance = coords and shared.target and right.zones[data.index].distance or 2
-            -- end
+            if not right.zones and not right.points then
+                coords = GetEntityCoords(cache.ped)
+                distance = 2
+            else
+                coords = shared.target and right.zones and right.zones[data.index].coords or right.points and right.points[data.index]
+                distance = coords and shared.target and right.zones[data.index].distance or 2
+            end
 
             right = {
                 type = 'crafting',
@@ -218,8 +218,8 @@ function client.openInventory(inv, data)
                 index = data.index,
                 slots = right.slots,
                 items = right.items,
-                -- coords = coords,
-                -- distance = distance
+                coords = coords,
+                distance = distance
             }
         end
     elseif invOpen ~= nil then
@@ -1902,9 +1902,4 @@ lib.callback.register('ox_inventory:getVehicleData', function(netid)
 	if entity then
 		return GetEntityModel(entity), GetVehicleClass(entity)
 	end
-end)
-
-
-AddEventHandler('ox_inventory:craftingEvent', function(id)
-    exports.ox_inventory:openInventory('crafting', { id = id, index = id})
 end)
